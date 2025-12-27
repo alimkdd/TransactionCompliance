@@ -1,0 +1,54 @@
+[
+  {
+    "ContainingType": "TransactionCompliance.API.Controllers.TransactionController",
+    "Method": "GetTransactionHistory",
+    "RelativePath": "api/v1/Transaction/History",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "TransactionCompliance.Application.DTO.Common.DataTableResponse\u00601[[TransactionCompliance.Application.DTO.Response.TransactionHistoryResponseModel, TransactionCompliance.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "TransactionCompliance.API.Controllers.TransactionController",
+    "Method": "Login",
+    "RelativePath": "api/v1/Transaction/Login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "TransactionCompliance.Application.DTO.Request.LoginRequestModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  }
+]

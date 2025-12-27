@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="TransactionCompliance.API/TransactionCompliance.API.csproj" />
+  <Project Path="TransactionCompliance.Application/TransactionCompliance.Application.csproj" />
+  <Project Path="TransactionCompliance.Domain/TransactionCompliance.Domain.csproj" />
+  <Project Path="TransactionCompliance.Infrastructure/TransactionCompliance.Infrastructure.csproj" />
+</Solution>

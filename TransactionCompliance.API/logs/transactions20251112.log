@@ -1,0 +1,1252 @@
+2025-11-12 16:20:23.926 +02:00 [WRN] No store type was specified for the decimal property 'Amount' on entity type 'Transaction'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-11-12 16:20:35.210 +02:00 [ERR] An error occurred using the connection to database 'TransactionCompliance' on server 'DESKTOP-8DBDUBG'.
+2025-11-12 16:20:35.251 +02:00 [ERR] An exception occurred while iterating over the results of a query for context type 'TransactionCompliance.Infrastructure.Context.AppDbContext'.
+System.InvalidOperationException: An exception has been raised that is likely due to a transient failure. Consider enabling transient error resiliency by adding 'EnableRetryOnFailure' to the 'UseSqlServer' call.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot open database "TransactionCompliance" requested by the login. The login failed.
+Login failed for user 'AppUser'.
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.CompleteLogin(Boolean enlistOK)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open(SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open()
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerConnection.OpenDbConnection(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternal(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.InitializeReader(Enumerator enumerator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.<>c.<MoveNext>b__21_0(DbContext _, Enumerator enumerator)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+ClientConnectionId:0a4fbec2-dbfd-452e-a13a-fe1f5235a58e
+Error Number:4060,State:1,Class:11
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.MoveNext()
+System.InvalidOperationException: An exception has been raised that is likely due to a transient failure. Consider enabling transient error resiliency by adding 'EnableRetryOnFailure' to the 'UseSqlServer' call.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot open database "TransactionCompliance" requested by the login. The login failed.
+Login failed for user 'AppUser'.
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.CompleteLogin(Boolean enlistOK)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open(SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open()
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerConnection.OpenDbConnection(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternal(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.InitializeReader(Enumerator enumerator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.<>c.<MoveNext>b__21_0(DbContext _, Enumerator enumerator)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+ClientConnectionId:0a4fbec2-dbfd-452e-a13a-fe1f5235a58e
+Error Number:4060,State:1,Class:11
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.MoveNext()
+2025-11-12 16:34:25.724 +02:00 [WRN] No store type was specified for the decimal property 'Amount' on entity type 'Transaction'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-11-12 16:34:25.822 +02:00 [WRN] No store type was specified for the decimal property 'Amount' on entity type 'Transaction'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-11-12 16:34:57.196 +02:00 [WRN] No store type was specified for the decimal property 'Amount' on entity type 'Transaction'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-11-12 16:34:57.495 +02:00 [WRN] No store type was specified for the decimal property 'Amount' on entity type 'Transaction'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-11-12 16:35:20.515 +02:00 [INF] Executed DbCommand (22,979ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+CREATE DATABASE [TransactionCompliance];
+2025-11-12 16:35:20.734 +02:00 [INF] Executed DbCommand (217ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [TransactionCompliance] SET READ_COMMITTED_SNAPSHOT ON;
+END;
+2025-11-12 16:35:20.758 +02:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-11-12 16:35:20.810 +02:00 [INF] Executed DbCommand (15ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [__EFMigrationsHistory] (
+    [MigrationId] nvarchar(150) NOT NULL,
+    [ProductVersion] nvarchar(32) NOT NULL,
+    CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+);
+2025-11-12 16:35:20.811 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-11-12 16:35:20.820 +02:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-11-12 16:35:20.842 +02:00 [INF] Executed DbCommand (20ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-11-12 16:35:20.850 +02:00 [INF] Applying migration '20251112143426_InitialMiggration'.
+2025-11-12 16:35:20.879 +02:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Statuses] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(50) NOT NULL,
+    [Description] nvarchar(max) NULL,
+    [CreatedAt] datetime2 NOT NULL,
+    CONSTRAINT [PK_Statuses] PRIMARY KEY ([Id])
+);
+2025-11-12 16:35:20.884 +02:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [TransactionTypes] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(50) NOT NULL,
+    [Description] nvarchar(max) NULL,
+    [CreatedAt] datetime2 NOT NULL,
+    [UpdatedAt] datetime2 NOT NULL,
+    CONSTRAINT [PK_TransactionTypes] PRIMARY KEY ([Id])
+);
+2025-11-12 16:35:20.888 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [UserAccounts] (
+    [Id] int NOT NULL IDENTITY,
+    [UserName] nvarchar(100) NOT NULL,
+    [Password] nvarchar(100) NOT NULL,
+    [PhoneNumber] nvarchar(200) NOT NULL,
+    [Balance] decimal(18,2) NOT NULL,
+    [Currency] nvarchar(max) NOT NULL,
+    [IsActive] bit NOT NULL,
+    [CreatedAt] datetime2 NOT NULL,
+    CONSTRAINT [PK_UserAccounts] PRIMARY KEY ([Id])
+);
+2025-11-12 16:35:20.893 +02:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Transactions] (
+    [Id] int NOT NULL IDENTITY,
+    [UserId] int NOT NULL,
+    [StatusId] int NOT NULL,
+    [TransactionTypeId] int NOT NULL,
+    [Amount] decimal(18,2) NOT NULL,
+    [Currency] nvarchar(max) NOT NULL,
+    [Description] nvarchar(max) NOT NULL,
+    [AccountNumberMasked] nvarchar(max) NOT NULL,
+    [CardNumberMasked] nvarchar(max) NOT NULL,
+    [AccountNumber] nvarchar(max) NOT NULL,
+    [CardNumber] nvarchar(max) NOT NULL,
+    [ReferenceNumber] nvarchar(max) NOT NULL,
+    [CustomerName] nvarchar(max) NOT NULL,
+    [CreatedAt] datetime2 NOT NULL,
+    CONSTRAINT [PK_Transactions] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Transactions_Statuses_StatusId] FOREIGN KEY ([StatusId]) REFERENCES [Statuses] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_Transactions_TransactionTypes_TransactionTypeId] FOREIGN KEY ([TransactionTypeId]) REFERENCES [TransactionTypes] ([Id]) ON DELETE CASCADE
+);
+2025-11-12 16:35:20.896 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Transactions_StatusId] ON [Transactions] ([StatusId]);
+2025-11-12 16:35:20.901 +02:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Transactions_TransactionTypeId] ON [Transactions] ([TransactionTypeId]);
+2025-11-12 16:35:20.913 +02:00 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20251112143426_InitialMiggration', N'8.0.0');
+2025-11-12 16:37:02.189 +02:00 [WRN] No store type was specified for the decimal property 'Amount' on entity type 'Transaction'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-11-12 16:37:02.615 +02:00 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [UserAccounts] AS [u]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-11-12 16:37:02.892 +02:00 [INF] Executed DbCommand (73ms) [Parameters=[@p0='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p1='?' (DbType = DateTime2), @p2='?' (Size = 4000), @p3='?' (DbType = Boolean), @p4='?' (Size = 100), @p5='?' (Size = 200), @p6='?' (Size = 100), @p7='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p8='?' (DbType = DateTime2), @p9='?' (Size = 4000), @p10='?' (DbType = Boolean), @p11='?' (Size = 100), @p12='?' (Size = 200), @p13='?' (Size = 100), @p14='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p15='?' (DbType = DateTime2), @p16='?' (Size = 4000), @p17='?' (DbType = Boolean), @p18='?' (Size = 100), @p19='?' (Size = 200), @p20='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+MERGE [UserAccounts] USING (
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, 0),
+(@p7, @p8, @p9, @p10, @p11, @p12, @p13, 1),
+(@p14, @p15, @p16, @p17, @p18, @p19, @p20, 2)) AS i ([Balance], [CreatedAt], [Currency], [IsActive], [Password], [PhoneNumber], [UserName], _Position) ON 1=0
+WHEN NOT MATCHED THEN
+INSERT ([Balance], [CreatedAt], [Currency], [IsActive], [Password], [PhoneNumber], [UserName])
+VALUES (i.[Balance], i.[CreatedAt], i.[Currency], i.[IsActive], i.[Password], i.[PhoneNumber], i.[UserName])
+OUTPUT INSERTED.[Id], i._Position;
+2025-11-12 16:37:02.921 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Statuses] AS [s]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-11-12 16:37:02.964 +02:00 [INF] Executed DbCommand (10ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (Size = 4000), @p2='?' (Size = 50), @p3='?' (DbType = DateTime2), @p4='?' (Size = 4000), @p5='?' (Size = 50), @p6='?' (DbType = DateTime2), @p7='?' (Size = 4000), @p8='?' (Size = 50), @p9='?' (DbType = DateTime2), @p10='?' (Size = 4000), @p11='?' (Size = 50), @p12='?' (DbType = DateTime2), @p13='?' (Size = 4000), @p14='?' (Size = 50)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+MERGE [Statuses] USING (
+VALUES (@p0, @p1, @p2, 0),
+(@p3, @p4, @p5, 1),
+(@p6, @p7, @p8, 2),
+(@p9, @p10, @p11, 3),
+(@p12, @p13, @p14, 4)) AS i ([CreatedAt], [Description], [Name], _Position) ON 1=0
+WHEN NOT MATCHED THEN
+INSERT ([CreatedAt], [Description], [Name])
+VALUES (i.[CreatedAt], i.[Description], i.[Name])
+OUTPUT INSERTED.[Id], i._Position;
+2025-11-12 16:37:02.976 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [TransactionTypes] AS [t]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-11-12 16:37:03.013 +02:00 [INF] Executed DbCommand (11ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (Size = 4000), @p2='?' (Size = 50), @p3='?' (DbType = DateTime2), @p4='?' (DbType = DateTime2), @p5='?' (Size = 4000), @p6='?' (Size = 50), @p7='?' (DbType = DateTime2), @p8='?' (DbType = DateTime2), @p9='?' (Size = 4000), @p10='?' (Size = 50), @p11='?' (DbType = DateTime2), @p12='?' (DbType = DateTime2), @p13='?' (Size = 4000), @p14='?' (Size = 50), @p15='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+MERGE [TransactionTypes] USING (
+VALUES (@p0, @p1, @p2, @p3, 0),
+(@p4, @p5, @p6, @p7, 1),
+(@p8, @p9, @p10, @p11, 2),
+(@p12, @p13, @p14, @p15, 3)) AS i ([CreatedAt], [Description], [Name], [UpdatedAt], _Position) ON 1=0
+WHEN NOT MATCHED THEN
+INSERT ([CreatedAt], [Description], [Name], [UpdatedAt])
+VALUES (i.[CreatedAt], i.[Description], i.[Name], i.[UpdatedAt])
+OUTPUT INSERTED.[Id], i._Position;
+2025-11-12 16:37:03.026 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Transactions] AS [t]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-11-12 16:37:21.919 +02:00 [WRN] No store type was specified for the decimal property 'Amount' on entity type 'Transaction'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-11-12 16:37:23.086 +02:00 [INF] Executed DbCommand (55ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [UserAccounts] AS [u]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-11-12 16:37:23.147 +02:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Statuses] AS [s]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-11-12 16:37:23.170 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [TransactionTypes] AS [t]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-11-12 16:37:23.192 +02:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Transactions] AS [t]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-11-12 16:38:22.076 +02:00 [WRN] No store type was specified for the decimal property 'Amount' on entity type 'Transaction'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-11-12 16:38:22.514 +02:00 [INF] Executed DbCommand (21ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [UserAccounts] AS [u]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-11-12 16:38:22.544 +02:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Statuses] AS [s]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-11-12 16:38:22.554 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [TransactionTypes] AS [t]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-11-12 16:38:22.571 +02:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Transactions] AS [t]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-11-12 16:40:22.203 +02:00 [WRN] No store type was specified for the decimal property 'Amount' on entity type 'Transaction'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-11-12 16:40:22.695 +02:00 [INF] Executed DbCommand (21ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [UserAccounts] AS [u]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-11-12 16:40:22.722 +02:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Statuses] AS [s]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-11-12 16:40:22.730 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [TransactionTypes] AS [t]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-11-12 16:40:22.740 +02:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Transactions] AS [t]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-11-12 16:40:22.968 +02:00 [INF] Executed DbCommand (53ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (DbType = DateTime2), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (Size = 4000), @p9='?' (Size = 4000), @p10='?' (DbType = Int32), @p11='?' (DbType = Int32), @p12='?' (DbType = Int32), @p13='?' (Size = 4000), @p14='?' (Size = 4000), @p15='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p16='?' (Size = 4000), @p17='?' (Size = 4000), @p18='?' (DbType = DateTime2), @p19='?' (Size = 4000), @p20='?' (Size = 4000), @p21='?' (Size = 4000), @p22='?' (Size = 4000), @p23='?' (DbType = Int32), @p24='?' (DbType = Int32), @p25='?' (DbType = Int32), @p26='?' (Size = 4000), @p27='?' (Size = 4000), @p28='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p29='?' (Size = 4000), @p30='?' (Size = 4000), @p31='?' (DbType = DateTime2), @p32='?' (Size = 4000), @p33='?' (Size = 4000), @p34='?' (Size = 4000), @p35='?' (Size = 4000), @p36='?' (DbType = Int32), @p37='?' (DbType = Int32), @p38='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+MERGE [Transactions] USING (
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, 0),
+(@p13, @p14, @p15, @p16, @p17, @p18, @p19, @p20, @p21, @p22, @p23, @p24, @p25, 1),
+(@p26, @p27, @p28, @p29, @p30, @p31, @p32, @p33, @p34, @p35, @p36, @p37, @p38, 2)) AS i ([AccountNumber], [AccountNumberMasked], [Amount], [CardNumber], [CardNumberMasked], [CreatedAt], [Currency], [CustomerName], [Description], [ReferenceNumber], [StatusId], [TransactionTypeId], [UserId], _Position) ON 1=0
+WHEN NOT MATCHED THEN
+INSERT ([AccountNumber], [AccountNumberMasked], [Amount], [CardNumber], [CardNumberMasked], [CreatedAt], [Currency], [CustomerName], [Description], [ReferenceNumber], [StatusId], [TransactionTypeId], [UserId])
+VALUES (i.[AccountNumber], i.[AccountNumberMasked], i.[Amount], i.[CardNumber], i.[CardNumberMasked], i.[CreatedAt], i.[Currency], i.[CustomerName], i.[Description], i.[ReferenceNumber], i.[StatusId], i.[TransactionTypeId], i.[UserId])
+OUTPUT INSERTED.[Id], i._Position;
+2025-11-12 16:40:23.048 +02:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-11-12 16:40:23.274 +02:00 [INF] Now listening on: https://localhost:7203
+2025-11-12 16:40:23.278 +02:00 [INF] Now listening on: http://localhost:5037
+2025-11-12 16:40:23.321 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-12 16:40:23.323 +02:00 [INF] Hosting environment: Development
+2025-11-12 16:40:23.325 +02:00 [INF] Content root path: C:\Users\User\source\repos\TransactionCompliance\TransactionCompliance.API
+2025-11-12 16:40:24.007 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7203/swagger - null null
+2025-11-12 16:40:24.216 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7203/swagger - 301 null null 220.2815ms
+2025-11-12 16:40:24.221 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7203/swagger/index.html - null null
+2025-11-12 16:40:24.297 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7203/swagger/index.html - 200 null text/html;charset=utf-8 75.7282ms
+2025-11-12 16:40:24.313 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7203/swagger/swagger-ui.css - null null
+2025-11-12 16:40:24.314 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7203/_framework/aspnetcore-browser-refresh.js - null null
+2025-11-12 16:40:24.313 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7203/swagger/index.js - null null
+2025-11-12 16:40:24.313 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7203/swagger/swagger-ui-standalone-preset.js - null null
+2025-11-12 16:40:24.348 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7203/swagger/index.js - 200 null application/javascript;charset=utf-8 35.3299ms
+2025-11-12 16:40:24.313 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7203/swagger/swagger-ui-bundle.js - null null
+2025-11-12 16:40:24.313 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7203/swagger/index.css - null null
+2025-11-12 16:40:24.331 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7203/_vs/browserLink - null null
+2025-11-12 16:40:24.366 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7203/_framework/aspnetcore-browser-refresh.js - 200 16535 application/javascript; charset=utf-8 51.8953ms
+2025-11-12 16:40:24.387 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7203/swagger/index.css - 200 152 text/css 73.9038ms
+2025-11-12 16:40:24.384 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7203/swagger/swagger-ui.css - 200 23649 text/css 71.3911ms
+2025-11-12 16:40:24.384 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7203/swagger/swagger-ui-standalone-preset.js - 200 77354 text/javascript 71.1226ms
+2025-11-12 16:40:24.418 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7203/swagger/swagger-ui-bundle.js - 200 424834 text/javascript 105.3928ms
+2025-11-12 16:40:24.470 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7203/_vs/browserLink - 200 null text/javascript; charset=UTF-8 139.0632ms
+2025-11-12 16:40:24.555 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7203/swagger/v1/swagger.json - null null
+2025-11-12 16:40:24.569 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7203/swagger/favicon-32x32.png - null null
+2025-11-12 16:40:24.573 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+System.MissingMethodException: Method not found: 'System.Collections.Generic.IDictionary`2<System.String,Microsoft.OpenApi.OpenApiMediaType> Microsoft.OpenApi.IOpenApiRequestBody.get_Content()'.
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOpenApiOperationFromMetadataAsync(ApiDescription apiDescription, SchemaRepository schemaRepository, OpenApiDocument document)
+   at System.Runtime.CompilerServices.AsyncMethodBuilderCore.Start[TStateMachine](TStateMachine& stateMachine)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOpenApiOperationFromMetadataAsync(ApiDescription apiDescription, SchemaRepository schemaRepository, OpenApiDocument document)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperationAsync(OpenApiDocument document, ApiDescription apiDescription, SchemaRepository schemaRepository, Func`4 parametersGenerator, Func`4 bodyGenerator, Func`3 applyFilters)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperationAsync(OpenApiDocument document, ApiDescription apiDescription, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperationsAsync(OpenApiDocument document, IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePathsAsync(OpenApiDocument document, IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository, Func`4 operationsGenerator)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePathsAsync(OpenApiDocument document, IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-11-12 16:40:24.575 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7203/swagger/favicon-32x32.png - 200 628 image/png 7.3587ms
+2025-11-12 16:40:24.586 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7203/swagger/v1/swagger.json - 500 null text/plain; charset=utf-8 31.5763ms
+2025-11-12 16:40:40.477 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7203/swagger/v1/swagger.json - null null
+2025-11-12 16:40:40.494 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+System.MissingMethodException: Method not found: 'System.Collections.Generic.IDictionary`2<System.String,Microsoft.OpenApi.OpenApiMediaType> Microsoft.OpenApi.IOpenApiRequestBody.get_Content()'.
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOpenApiOperationFromMetadataAsync(ApiDescription apiDescription, SchemaRepository schemaRepository, OpenApiDocument document)
+   at System.Runtime.CompilerServices.AsyncMethodBuilderCore.Start[TStateMachine](TStateMachine& stateMachine)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOpenApiOperationFromMetadataAsync(ApiDescription apiDescription, SchemaRepository schemaRepository, OpenApiDocument document)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperationAsync(OpenApiDocument document, ApiDescription apiDescription, SchemaRepository schemaRepository, Func`4 parametersGenerator, Func`4 bodyGenerator, Func`3 applyFilters)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperationAsync(OpenApiDocument document, ApiDescription apiDescription, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperationsAsync(OpenApiDocument document, IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePathsAsync(OpenApiDocument document, IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository, Func`4 operationsGenerator)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePathsAsync(OpenApiDocument document, IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-11-12 16:40:40.538 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7203/swagger/v1/swagger.json - 500 null text/html; charset=utf-8 61.2993ms
+2025-11-12 16:40:40.572 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7203/_vs/browserLink - null null
+2025-11-12 16:40:40.573 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7203/_framework/aspnetcore-browser-refresh.js - null null
+2025-11-12 16:40:40.595 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7203/_framework/aspnetcore-browser-refresh.js - 200 16535 application/javascript; charset=utf-8 21.847ms
+2025-11-12 16:40:40.608 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7203/_vs/browserLink - 200 null text/javascript; charset=UTF-8 36.9646ms
+2025-11-12 16:40:40.639 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7203/favicon.ico - null null
+2025-11-12 16:40:40.648 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7203/favicon.ico - 404 0 null 10.5533ms
+2025-11-12 16:40:40.658 +02:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7203/favicon.ico, Response status code: 404
+2025-11-12 16:45:00.908 +02:00 [WRN] No store type was specified for the decimal property 'Amount' on entity type 'Transaction'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-11-12 16:45:01.807 +02:00 [INF] Executed DbCommand (26ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [UserAccounts] AS [u]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-11-12 16:45:01.847 +02:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Statuses] AS [s]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-11-12 16:45:01.859 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [TransactionTypes] AS [t]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-11-12 16:45:01.868 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Transactions] AS [t]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-11-12 16:45:01.985 +02:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-11-12 16:45:02.264 +02:00 [INF] Now listening on: https://localhost:7203
+2025-11-12 16:45:02.267 +02:00 [INF] Now listening on: http://localhost:5037
+2025-11-12 16:45:02.425 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-12 16:45:02.427 +02:00 [INF] Hosting environment: Development
+2025-11-12 16:45:02.428 +02:00 [INF] Content root path: C:\Users\User\source\repos\TransactionCompliance\TransactionCompliance.API
+2025-11-12 16:45:02.900 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7203/_framework/aspnetcore-browser-refresh.js - null null
+2025-11-12 16:45:02.900 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7203/_vs/browserLink - null null
+2025-11-12 16:45:02.957 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7203/_framework/aspnetcore-browser-refresh.js - 200 16535 application/javascript; charset=utf-8 74.0394ms
+2025-11-12 16:45:03.033 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7203/_vs/browserLink - 200 null text/javascript; charset=UTF-8 161.212ms
+2025-11-12 16:45:03.082 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7203/swagger/v1/swagger.json - null null
+2025-11-12 16:45:03.256 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+System.MissingMethodException: Method not found: 'System.Collections.Generic.IDictionary`2<System.String,Microsoft.OpenApi.OpenApiMediaType> Microsoft.OpenApi.IOpenApiRequestBody.get_Content()'.
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOpenApiOperationFromMetadataAsync(ApiDescription apiDescription, SchemaRepository schemaRepository, OpenApiDocument document)
+   at System.Runtime.CompilerServices.AsyncMethodBuilderCore.Start[TStateMachine](TStateMachine& stateMachine)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOpenApiOperationFromMetadataAsync(ApiDescription apiDescription, SchemaRepository schemaRepository, OpenApiDocument document)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperationAsync(OpenApiDocument document, ApiDescription apiDescription, SchemaRepository schemaRepository, Func`4 parametersGenerator, Func`4 bodyGenerator, Func`3 applyFilters)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperationAsync(OpenApiDocument document, ApiDescription apiDescription, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperationsAsync(OpenApiDocument document, IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePathsAsync(OpenApiDocument document, IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository, Func`4 operationsGenerator)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePathsAsync(OpenApiDocument document, IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-11-12 16:45:03.278 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7203/swagger/v1/swagger.json - 500 null text/plain; charset=utf-8 195.5958ms
+2025-11-12 16:46:07.895 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7203/swagger/v1/swagger.json - null null
+2025-11-12 16:46:08.007 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+System.MissingMethodException: Method not found: 'System.Collections.Generic.IDictionary`2<System.String,Microsoft.OpenApi.OpenApiMediaType> Microsoft.OpenApi.IOpenApiRequestBody.get_Content()'.
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOpenApiOperationFromMetadataAsync(ApiDescription apiDescription, SchemaRepository schemaRepository, OpenApiDocument document)
+   at System.Runtime.CompilerServices.AsyncMethodBuilderCore.Start[TStateMachine](TStateMachine& stateMachine)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOpenApiOperationFromMetadataAsync(ApiDescription apiDescription, SchemaRepository schemaRepository, OpenApiDocument document)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperationAsync(OpenApiDocument document, ApiDescription apiDescription, SchemaRepository schemaRepository, Func`4 parametersGenerator, Func`4 bodyGenerator, Func`3 applyFilters)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperationAsync(OpenApiDocument document, ApiDescription apiDescription, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperationsAsync(OpenApiDocument document, IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePathsAsync(OpenApiDocument document, IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository, Func`4 operationsGenerator)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePathsAsync(OpenApiDocument document, IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-11-12 16:46:08.064 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7203/swagger/v1/swagger.json - 500 null text/html; charset=utf-8 169.0895ms
+2025-11-12 16:46:08.102 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7203/_vs/browserLink - null null
+2025-11-12 16:46:08.103 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7203/_framework/aspnetcore-browser-refresh.js - null null
+2025-11-12 16:46:08.123 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7203/_framework/aspnetcore-browser-refresh.js - 200 16535 application/javascript; charset=utf-8 20.3508ms
+2025-11-12 16:46:08.159 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7203/_vs/browserLink - 200 null text/javascript; charset=UTF-8 58.3106ms
+2025-11-12 16:48:05.106 +02:00 [WRN] No store type was specified for the decimal property 'Amount' on entity type 'Transaction'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-11-12 16:48:05.846 +02:00 [INF] Executed DbCommand (26ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [UserAccounts] AS [u]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-11-12 16:48:05.897 +02:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Statuses] AS [s]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-11-12 16:48:05.910 +02:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [TransactionTypes] AS [t]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-11-12 16:48:05.924 +02:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Transactions] AS [t]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-11-12 16:48:06.048 +02:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-11-12 16:48:06.288 +02:00 [INF] Now listening on: https://localhost:7203
+2025-11-12 16:48:06.289 +02:00 [INF] Now listening on: http://localhost:5037
+2025-11-12 16:48:06.443 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-12 16:48:06.444 +02:00 [INF] Hosting environment: Development
+2025-11-12 16:48:06.445 +02:00 [INF] Content root path: C:\Users\User\source\repos\TransactionCompliance\TransactionCompliance.API
+2025-11-12 16:48:07.105 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7203/_vs/browserLink - null null
+2025-11-12 16:48:07.105 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7203/_framework/aspnetcore-browser-refresh.js - null null
+2025-11-12 16:48:07.148 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7203/_framework/aspnetcore-browser-refresh.js - 200 16535 application/javascript; charset=utf-8 58.5775ms
+2025-11-12 16:48:07.213 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7203/_vs/browserLink - 200 null text/javascript; charset=UTF-8 124.1672ms
+2025-11-12 16:48:07.247 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7203/swagger/v1/swagger.json - null null
+2025-11-12 16:48:07.379 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+System.MissingMethodException: Method not found: 'System.Collections.Generic.IDictionary`2<System.String,Microsoft.OpenApi.OpenApiMediaType> Microsoft.OpenApi.IOpenApiRequestBody.get_Content()'.
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOpenApiOperationFromMetadataAsync(ApiDescription apiDescription, SchemaRepository schemaRepository, OpenApiDocument document)
+   at System.Runtime.CompilerServices.AsyncMethodBuilderCore.Start[TStateMachine](TStateMachine& stateMachine)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOpenApiOperationFromMetadataAsync(ApiDescription apiDescription, SchemaRepository schemaRepository, OpenApiDocument document)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperationAsync(OpenApiDocument document, ApiDescription apiDescription, SchemaRepository schemaRepository, Func`4 parametersGenerator, Func`4 bodyGenerator, Func`3 applyFilters)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperationAsync(OpenApiDocument document, ApiDescription apiDescription, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperationsAsync(OpenApiDocument document, IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePathsAsync(OpenApiDocument document, IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository, Func`4 operationsGenerator)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePathsAsync(OpenApiDocument document, IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-11-12 16:48:07.393 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7203/swagger/v1/swagger.json - 500 null text/plain; charset=utf-8 146.0018ms
+2025-11-12 16:48:13.514 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7203/swagger/v1/swagger.json - null null
+2025-11-12 16:48:13.640 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+System.MissingMethodException: Method not found: 'System.Collections.Generic.IDictionary`2<System.String,Microsoft.OpenApi.OpenApiMediaType> Microsoft.OpenApi.IOpenApiRequestBody.get_Content()'.
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOpenApiOperationFromMetadataAsync(ApiDescription apiDescription, SchemaRepository schemaRepository, OpenApiDocument document)
+   at System.Runtime.CompilerServices.AsyncMethodBuilderCore.Start[TStateMachine](TStateMachine& stateMachine)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOpenApiOperationFromMetadataAsync(ApiDescription apiDescription, SchemaRepository schemaRepository, OpenApiDocument document)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperationAsync(OpenApiDocument document, ApiDescription apiDescription, SchemaRepository schemaRepository, Func`4 parametersGenerator, Func`4 bodyGenerator, Func`3 applyFilters)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperationAsync(OpenApiDocument document, ApiDescription apiDescription, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperationsAsync(OpenApiDocument document, IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePathsAsync(OpenApiDocument document, IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository, Func`4 operationsGenerator)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePathsAsync(OpenApiDocument document, IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-11-12 16:48:13.718 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7203/swagger/v1/swagger.json - 500 null text/html; charset=utf-8 204.8078ms
+2025-11-12 16:48:13.751 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7203/_vs/browserLink - null null
+2025-11-12 16:48:13.754 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7203/_framework/aspnetcore-browser-refresh.js - null null
+2025-11-12 16:48:13.769 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7203/_framework/aspnetcore-browser-refresh.js - 200 16535 application/javascript; charset=utf-8 15.262ms
+2025-11-12 16:48:13.795 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7203/_vs/browserLink - 200 null text/javascript; charset=UTF-8 43.9439ms
+2025-11-12 16:51:33.863 +02:00 [WRN] No store type was specified for the decimal property 'Amount' on entity type 'Transaction'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-11-12 16:51:34.852 +02:00 [INF] Executed DbCommand (36ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [UserAccounts] AS [u]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-11-12 16:51:34.899 +02:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Statuses] AS [s]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-11-12 16:51:34.914 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [TransactionTypes] AS [t]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-11-12 16:51:34.925 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Transactions] AS [t]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-11-12 16:51:35.071 +02:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-11-12 16:51:35.365 +02:00 [INF] Now listening on: https://localhost:7203
+2025-11-12 16:51:35.369 +02:00 [INF] Now listening on: http://localhost:5037
+2025-11-12 16:51:35.498 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-12 16:51:35.501 +02:00 [INF] Hosting environment: Development
+2025-11-12 16:51:35.502 +02:00 [INF] Content root path: C:\Users\User\source\repos\TransactionCompliance\TransactionCompliance.API
+2025-11-12 16:51:35.927 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7203/_framework/aspnetcore-browser-refresh.js - null null
+2025-11-12 16:51:35.927 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7203/_vs/browserLink - null null
+2025-11-12 16:51:35.974 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7203/_framework/aspnetcore-browser-refresh.js - 200 16535 application/javascript; charset=utf-8 64.0065ms
+2025-11-12 16:51:36.049 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7203/_vs/browserLink - 200 null text/javascript; charset=UTF-8 140.4075ms
+2025-11-12 16:51:36.089 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7203/swagger/v1/swagger.json - null null
+2025-11-12 16:51:36.247 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7203/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 158.2291ms
+2025-11-12 16:51:44.558 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7203/api/v1/Transaction/History - null null
+2025-11-12 16:51:44.581 +02:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-11-12 16:51:44.587 +02:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-11-12 16:51:44.589 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7203/api/v1/Transaction/History - 401 0 null 31.392ms
+2025-11-12 16:51:59.797 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7203/api/v1/Transaction/Login - application/json 56
+2025-11-12 16:51:59.813 +02:00 [INF] Executing endpoint 'TransactionCompliance.API.Controllers.TransactionController.Login (TransactionCompliance.API)'
+2025-11-12 16:51:59.850 +02:00 [INF] Route matched with {action = "Login", controller = "Transaction"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.String] Login(TransactionCompliance.Application.DTO.Request.LoginRequestModel) on controller TransactionCompliance.API.Controllers.TransactionController (TransactionCompliance.API).
+2025-11-12 16:52:00.141 +02:00 [INF] Executed DbCommand (76ms) [Parameters=[@__request_Username_0='?' (Size = 100), @__request_Password_1='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Balance], [u].[CreatedAt], [u].[Currency], [u].[IsActive], [u].[Password], [u].[PhoneNumber], [u].[UserName]
+FROM [UserAccounts] AS [u]
+WHERE [u].[UserName] = @__request_Username_0 AND [u].[Password] = @__request_Password_1
+2025-11-12 16:52:00.247 +02:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2025-11-12 16:52:00.254 +02:00 [INF] Executed action TransactionCompliance.API.Controllers.TransactionController.Login (TransactionCompliance.API) in 396.7195ms
+2025-11-12 16:52:00.256 +02:00 [INF] Executed endpoint 'TransactionCompliance.API.Controllers.TransactionController.Login (TransactionCompliance.API)'
+2025-11-12 16:52:00.260 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7203/api/v1/Transaction/Login - 200 null text/plain; charset=utf-8 464.1273ms
+2025-11-12 16:52:32.703 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7203/api/v1/Transaction/History - null null
+2025-11-12 16:52:32.748 +02:00 [INF] Executing endpoint 'TransactionCompliance.API.Controllers.TransactionController.GetTransactionHistory (TransactionCompliance.API)'
+2025-11-12 16:52:32.755 +02:00 [INF] Route matched with {action = "GetTransactionHistory", controller = "Transaction"}. Executing controller action with signature System.Threading.Tasks.Task`1[TransactionCompliance.Application.DTO.Common.DataTableResponse`1[TransactionCompliance.Application.DTO.Response.TransactionHistoryResponseModel]] GetTransactionHistory(System.String) on controller TransactionCompliance.API.Controllers.TransactionController (TransactionCompliance.API).
+2025-11-12 16:53:14.388 +02:00 [WRN] No store type was specified for the decimal property 'Amount' on entity type 'Transaction'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-11-12 16:53:15.444 +02:00 [INF] Executed DbCommand (46ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [UserAccounts] AS [u]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-11-12 16:53:15.506 +02:00 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Statuses] AS [s]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-11-12 16:53:15.526 +02:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [TransactionTypes] AS [t]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-11-12 16:53:15.544 +02:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Transactions] AS [t]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-11-12 16:53:15.688 +02:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-11-12 16:53:15.987 +02:00 [INF] Now listening on: https://localhost:7203
+2025-11-12 16:53:15.990 +02:00 [INF] Now listening on: http://localhost:5037
+2025-11-12 16:53:16.133 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-12 16:53:16.135 +02:00 [INF] Hosting environment: Development
+2025-11-12 16:53:16.137 +02:00 [INF] Content root path: C:\Users\User\source\repos\TransactionCompliance\TransactionCompliance.API
+2025-11-12 16:53:16.754 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7203/_framework/aspnetcore-browser-refresh.js - null null
+2025-11-12 16:53:16.754 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7203/_vs/browserLink - null null
+2025-11-12 16:53:16.808 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7203/_framework/aspnetcore-browser-refresh.js - 200 16535 application/javascript; charset=utf-8 72.1439ms
+2025-11-12 16:53:16.886 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7203/_vs/browserLink - 200 null text/javascript; charset=UTF-8 153.123ms
+2025-11-12 16:53:16.926 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7203/swagger/v1/swagger.json - null null
+2025-11-12 16:53:17.067 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7203/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 141.0471ms
+2025-11-12 16:53:28.083 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7203/api/v1/Transaction/History - null null
+2025-11-12 16:53:28.203 +02:00 [INF] Executing endpoint 'TransactionCompliance.API.Controllers.TransactionController.GetTransactionHistory (TransactionCompliance.API)'
+2025-11-12 16:53:28.240 +02:00 [INF] Route matched with {action = "GetTransactionHistory", controller = "Transaction"}. Executing controller action with signature System.Threading.Tasks.Task`1[TransactionCompliance.Application.DTO.Common.DataTableResponse`1[TransactionCompliance.Application.DTO.Response.TransactionHistoryResponseModel]] GetTransactionHistory(System.String) on controller TransactionCompliance.API.Controllers.TransactionController (TransactionCompliance.API).
+2025-11-12 16:53:28.487 +02:00 [INF] Executed action TransactionCompliance.API.Controllers.TransactionController.GetTransactionHistory (TransactionCompliance.API) in 238.4497ms
+2025-11-12 16:53:28.492 +02:00 [INF] Executed endpoint 'TransactionCompliance.API.Controllers.TransactionController.GetTransactionHistory (TransactionCompliance.API)'
+2025-11-12 16:53:28.501 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+System.OverflowException: Value was either too large or too small for an Int32.
+   at System.Number.ThrowOverflowException[TInteger]()
+   at System.Convert.ToInt32(String value)
+   at TransactionCompliance.Application.Services.TransactionRepository.GetTransactionHistory(String request) in C:\Users\User\source\repos\TransactionCompliance\TransactionCompliance.Application\Services\TransactionRepository.cs:line 49
+   at TransactionCompliance.API.Controllers.TransactionController.GetTransactionHistory(String request) in C:\Users\User\source\repos\TransactionCompliance\TransactionCompliance.API\Controllers\TransactionController.cs:line 30
+   at lambda_method17(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-11-12 16:53:28.602 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7203/api/v1/Transaction/History - 500 null text/plain; charset=utf-8 519.6134ms
+2025-11-12 16:55:58.103 +02:00 [WRN] No store type was specified for the decimal property 'Amount' on entity type 'Transaction'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-11-12 16:55:58.229 +02:00 [WRN] No store type was specified for the decimal property 'Amount' on entity type 'Transaction'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-11-12 16:56:10.934 +02:00 [WRN] No store type was specified for the decimal property 'Amount' on entity type 'Transaction'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-11-12 16:56:11.028 +02:00 [WRN] No store type was specified for the decimal property 'Amount' on entity type 'Transaction'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-11-12 16:56:17.719 +02:00 [WRN] No store type was specified for the decimal property 'Amount' on entity type 'Transaction'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-11-12 16:56:17.975 +02:00 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-11-12 16:56:17.991 +02:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-11-12 16:56:17.993 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-11-12 16:56:17.997 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-11-12 16:56:18.021 +02:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-11-12 16:56:18.031 +02:00 [INF] Applying migration '20251112145611_InitialMigration'.
+2025-11-12 16:56:18.075 +02:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Statuses] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(50) NOT NULL,
+    [Description] nvarchar(max) NULL,
+    [CreatedAt] datetime2 NOT NULL,
+    CONSTRAINT [PK_Statuses] PRIMARY KEY ([Id])
+);
+2025-11-12 16:56:18.077 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [TransactionTypes] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(50) NOT NULL,
+    [Description] nvarchar(max) NULL,
+    [CreatedAt] datetime2 NOT NULL,
+    [UpdatedAt] datetime2 NOT NULL,
+    CONSTRAINT [PK_TransactionTypes] PRIMARY KEY ([Id])
+);
+2025-11-12 16:56:18.079 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [UserAccounts] (
+    [Id] int NOT NULL IDENTITY,
+    [UserName] nvarchar(100) NOT NULL,
+    [Password] nvarchar(100) NOT NULL,
+    [PhoneNumber] nvarchar(200) NOT NULL,
+    [Balance] decimal(18,2) NOT NULL,
+    [Currency] nvarchar(max) NOT NULL,
+    [IsActive] bit NOT NULL,
+    [CreatedAt] datetime2 NOT NULL,
+    CONSTRAINT [PK_UserAccounts] PRIMARY KEY ([Id])
+);
+2025-11-12 16:56:18.085 +02:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Transactions] (
+    [Id] int NOT NULL IDENTITY,
+    [UserId] int NOT NULL,
+    [StatusId] int NOT NULL,
+    [TransactionTypeId] int NOT NULL,
+    [Amount] decimal(18,2) NOT NULL,
+    [Currency] nvarchar(max) NOT NULL,
+    [Description] nvarchar(max) NOT NULL,
+    [AccountNumberMasked] nvarchar(max) NOT NULL,
+    [CardNumberMasked] nvarchar(max) NOT NULL,
+    [AccountNumber] nvarchar(max) NOT NULL,
+    [CardNumber] nvarchar(max) NOT NULL,
+    [ReferenceNumber] nvarchar(max) NOT NULL,
+    [CustomerName] nvarchar(max) NOT NULL,
+    [CreatedAt] datetime2 NOT NULL,
+    [UserAccountId] int NULL,
+    CONSTRAINT [PK_Transactions] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Transactions_Statuses_StatusId] FOREIGN KEY ([StatusId]) REFERENCES [Statuses] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_Transactions_TransactionTypes_TransactionTypeId] FOREIGN KEY ([TransactionTypeId]) REFERENCES [TransactionTypes] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_Transactions_UserAccounts_UserAccountId] FOREIGN KEY ([UserAccountId]) REFERENCES [UserAccounts] ([Id])
+);
+2025-11-12 16:56:18.088 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Transactions_StatusId] ON [Transactions] ([StatusId]);
+2025-11-12 16:56:18.089 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Transactions_TransactionTypeId] ON [Transactions] ([TransactionTypeId]);
+2025-11-12 16:56:18.091 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Transactions_UserAccountId] ON [Transactions] ([UserAccountId]);
+2025-11-12 16:56:18.093 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20251112145611_InitialMigration', N'8.0.0');
+2025-11-12 16:56:32.265 +02:00 [WRN] No store type was specified for the decimal property 'Amount' on entity type 'Transaction'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-11-12 16:56:33.203 +02:00 [INF] Executed DbCommand (53ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [UserAccounts] AS [u]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-11-12 16:56:33.713 +02:00 [INF] Executed DbCommand (74ms) [Parameters=[@p0='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p1='?' (DbType = DateTime2), @p2='?' (Size = 4000), @p3='?' (DbType = Boolean), @p4='?' (Size = 100), @p5='?' (Size = 200), @p6='?' (Size = 100), @p7='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p8='?' (DbType = DateTime2), @p9='?' (Size = 4000), @p10='?' (DbType = Boolean), @p11='?' (Size = 100), @p12='?' (Size = 200), @p13='?' (Size = 100), @p14='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p15='?' (DbType = DateTime2), @p16='?' (Size = 4000), @p17='?' (DbType = Boolean), @p18='?' (Size = 100), @p19='?' (Size = 200), @p20='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+MERGE [UserAccounts] USING (
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, 0),
+(@p7, @p8, @p9, @p10, @p11, @p12, @p13, 1),
+(@p14, @p15, @p16, @p17, @p18, @p19, @p20, 2)) AS i ([Balance], [CreatedAt], [Currency], [IsActive], [Password], [PhoneNumber], [UserName], _Position) ON 1=0
+WHEN NOT MATCHED THEN
+INSERT ([Balance], [CreatedAt], [Currency], [IsActive], [Password], [PhoneNumber], [UserName])
+VALUES (i.[Balance], i.[CreatedAt], i.[Currency], i.[IsActive], i.[Password], i.[PhoneNumber], i.[UserName])
+OUTPUT INSERTED.[Id], i._Position;
+2025-11-12 16:56:33.769 +02:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Statuses] AS [s]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-11-12 16:56:33.829 +02:00 [INF] Executed DbCommand (11ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (Size = 4000), @p2='?' (Size = 50), @p3='?' (DbType = DateTime2), @p4='?' (Size = 4000), @p5='?' (Size = 50), @p6='?' (DbType = DateTime2), @p7='?' (Size = 4000), @p8='?' (Size = 50), @p9='?' (DbType = DateTime2), @p10='?' (Size = 4000), @p11='?' (Size = 50), @p12='?' (DbType = DateTime2), @p13='?' (Size = 4000), @p14='?' (Size = 50)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+MERGE [Statuses] USING (
+VALUES (@p0, @p1, @p2, 0),
+(@p3, @p4, @p5, 1),
+(@p6, @p7, @p8, 2),
+(@p9, @p10, @p11, 3),
+(@p12, @p13, @p14, 4)) AS i ([CreatedAt], [Description], [Name], _Position) ON 1=0
+WHEN NOT MATCHED THEN
+INSERT ([CreatedAt], [Description], [Name])
+VALUES (i.[CreatedAt], i.[Description], i.[Name])
+OUTPUT INSERTED.[Id], i._Position;
+2025-11-12 16:56:33.845 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [TransactionTypes] AS [t]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-11-12 16:56:33.887 +02:00 [INF] Executed DbCommand (9ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (Size = 4000), @p2='?' (Size = 50), @p3='?' (DbType = DateTime2), @p4='?' (DbType = DateTime2), @p5='?' (Size = 4000), @p6='?' (Size = 50), @p7='?' (DbType = DateTime2), @p8='?' (DbType = DateTime2), @p9='?' (Size = 4000), @p10='?' (Size = 50), @p11='?' (DbType = DateTime2), @p12='?' (DbType = DateTime2), @p13='?' (Size = 4000), @p14='?' (Size = 50), @p15='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+MERGE [TransactionTypes] USING (
+VALUES (@p0, @p1, @p2, @p3, 0),
+(@p4, @p5, @p6, @p7, 1),
+(@p8, @p9, @p10, @p11, 2),
+(@p12, @p13, @p14, @p15, 3)) AS i ([CreatedAt], [Description], [Name], [UpdatedAt], _Position) ON 1=0
+WHEN NOT MATCHED THEN
+INSERT ([CreatedAt], [Description], [Name], [UpdatedAt])
+VALUES (i.[CreatedAt], i.[Description], i.[Name], i.[UpdatedAt])
+OUTPUT INSERTED.[Id], i._Position;
+2025-11-12 16:56:33.924 +02:00 [INF] Executed DbCommand (23ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Transactions] AS [t]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-11-12 16:56:34.052 +02:00 [INF] Executed DbCommand (38ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (DbType = DateTime2), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (Size = 4000), @p9='?' (Size = 4000), @p10='?' (DbType = Int32), @p11='?' (DbType = Int32), @p12='?' (DbType = Int32), @p13='?' (DbType = Int32), @p14='?' (Size = 4000), @p15='?' (Size = 4000), @p16='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p17='?' (Size = 4000), @p18='?' (Size = 4000), @p19='?' (DbType = DateTime2), @p20='?' (Size = 4000), @p21='?' (Size = 4000), @p22='?' (Size = 4000), @p23='?' (Size = 4000), @p24='?' (DbType = Int32), @p25='?' (DbType = Int32), @p26='?' (DbType = Int32), @p27='?' (DbType = Int32), @p28='?' (Size = 4000), @p29='?' (Size = 4000), @p30='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p31='?' (Size = 4000), @p32='?' (Size = 4000), @p33='?' (DbType = DateTime2), @p34='?' (Size = 4000), @p35='?' (Size = 4000), @p36='?' (Size = 4000), @p37='?' (Size = 4000), @p38='?' (DbType = Int32), @p39='?' (DbType = Int32), @p40='?' (DbType = Int32), @p41='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+MERGE [Transactions] USING (
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, 0),
+(@p14, @p15, @p16, @p17, @p18, @p19, @p20, @p21, @p22, @p23, @p24, @p25, @p26, @p27, 1),
+(@p28, @p29, @p30, @p31, @p32, @p33, @p34, @p35, @p36, @p37, @p38, @p39, @p40, @p41, 2)) AS i ([AccountNumber], [AccountNumberMasked], [Amount], [CardNumber], [CardNumberMasked], [CreatedAt], [Currency], [CustomerName], [Description], [ReferenceNumber], [StatusId], [TransactionTypeId], [UserAccountId], [UserId], _Position) ON 1=0
+WHEN NOT MATCHED THEN
+INSERT ([AccountNumber], [AccountNumberMasked], [Amount], [CardNumber], [CardNumberMasked], [CreatedAt], [Currency], [CustomerName], [Description], [ReferenceNumber], [StatusId], [TransactionTypeId], [UserAccountId], [UserId])
+VALUES (i.[AccountNumber], i.[AccountNumberMasked], i.[Amount], i.[CardNumber], i.[CardNumberMasked], i.[CreatedAt], i.[Currency], i.[CustomerName], i.[Description], i.[ReferenceNumber], i.[StatusId], i.[TransactionTypeId], i.[UserAccountId], i.[UserId])
+OUTPUT INSERTED.[Id], i._Position;
+2025-11-12 16:56:34.158 +02:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-11-12 16:56:34.425 +02:00 [INF] Now listening on: https://localhost:7203
+2025-11-12 16:56:34.427 +02:00 [INF] Now listening on: http://localhost:5037
+2025-11-12 16:56:34.528 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-12 16:56:34.532 +02:00 [INF] Hosting environment: Development
+2025-11-12 16:56:34.534 +02:00 [INF] Content root path: C:\Users\User\source\repos\TransactionCompliance\TransactionCompliance.API
+2025-11-12 16:56:34.905 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7203/_vs/browserLink - null null
+2025-11-12 16:56:34.905 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7203/_framework/aspnetcore-browser-refresh.js - null null
+2025-11-12 16:56:34.958 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7203/_framework/aspnetcore-browser-refresh.js - 200 16535 application/javascript; charset=utf-8 69.1147ms
+2025-11-12 16:56:35.025 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7203/_vs/browserLink - 200 null text/javascript; charset=UTF-8 137.8826ms
+2025-11-12 16:56:35.064 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7203/swagger/v1/swagger.json - null null
+2025-11-12 16:56:35.232 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7203/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 168.1861ms
+2025-11-12 16:56:53.868 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7203/api/v1/Transaction/History - null null
+2025-11-12 16:56:53.890 +02:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-11-12 16:56:53.897 +02:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-11-12 16:56:53.899 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7203/api/v1/Transaction/History - 401 0 null 30.9245ms
+2025-11-12 16:56:59.772 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7203/api/v1/Transaction/History - null null
+2025-11-12 16:56:59.918 +02:00 [INF] Executing endpoint 'TransactionCompliance.API.Controllers.TransactionController.GetTransactionHistory (TransactionCompliance.API)'
+2025-11-12 16:56:59.965 +02:00 [INF] Route matched with {action = "GetTransactionHistory", controller = "Transaction"}. Executing controller action with signature System.Threading.Tasks.Task`1[TransactionCompliance.Application.DTO.Common.DataTableResponse`1[TransactionCompliance.Application.DTO.Response.TransactionHistoryResponseModel]] GetTransactionHistory(System.String) on controller TransactionCompliance.API.Controllers.TransactionController (TransactionCompliance.API).
+2025-11-12 16:57:11.185 +02:00 [INF] Executed DbCommand (26ms) [Parameters=[@__mobileNumber_0='?' (Size = 200)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Transactions] AS [t]
+LEFT JOIN [UserAccounts] AS [u] ON [t].[UserAccountId] = [u].[Id]
+WHERE [u].[PhoneNumber] = @__mobileNumber_0
+2025-11-12 16:57:12.891 +02:00 [INF] Executed action TransactionCompliance.API.Controllers.TransactionController.GetTransactionHistory (TransactionCompliance.API) in 12915.0163ms
+2025-11-12 16:57:12.895 +02:00 [INF] Executed endpoint 'TransactionCompliance.API.Controllers.TransactionController.GetTransactionHistory (TransactionCompliance.API)'
+2025-11-12 16:57:12.905 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: The client projection contains a reference to a constant expression of 'TransactionCompliance.Application.Services.TransactionRepository' through the instance method 'MaskAccount'. This could potentially cause a memory leak; consider making the method static so that it does not capture constant in the instance. See https://go.microsoft.com/fwlink/?linkid=2103067 for more information and examples.
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.ConstantVerifyingExpressionVisitor.VisitMethodCall(MethodCallExpression methodCallExpression)
+   at System.Linq.Expressions.ExpressionVisitor.VisitMemberAssignment(MemberAssignment node)
+   at System.Linq.Expressions.ExpressionVisitor.VisitMemberBinding(MemberBinding node)
+   at System.Linq.Expressions.ExpressionVisitor.Visit[T](ReadOnlyCollection`1 nodes, Func`2 elementVisitor)
+   at System.Linq.Expressions.ExpressionVisitor.VisitMemberInit(MemberInitExpression node)
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.VerifyNoClientConstant(Expression expression)
+   at Microsoft.EntityFrameworkCore.Query.RelationalShapedQueryCompilingExpressionVisitor.VisitShapedQuery(ShapedQueryExpression shapedQueryExpression)
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.VisitExtension(Expression extensionExpression)
+   at Microsoft.EntityFrameworkCore.Query.RelationalShapedQueryCompilingExpressionVisitor.VisitExtension(Expression extensionExpression)
+   at Microsoft.EntityFrameworkCore.Query.QueryCompilationContext.CreateQueryExecutor[TResult](Expression query)
+   at Microsoft.EntityFrameworkCore.Storage.Database.CompileQuery[TResult](Expression query, Boolean async)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.CompileQueryCore[TResult](IDatabase database, Expression query, IModel model, Boolean async)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.<>c__DisplayClass12_0`1.<ExecuteAsync>b__0()
+   at Microsoft.EntityFrameworkCore.Query.Internal.CompiledQueryCache.GetOrAddQuery[TResult](Object cacheKey, Func`1 compiler)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.ExecuteAsync[TResult](Expression query, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryProvider.ExecuteAsync[TResult](Expression expression, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryable`1.GetAsyncEnumerator(CancellationToken cancellationToken)
+   at System.Runtime.CompilerServices.ConfiguredCancelableAsyncEnumerable`1.GetAsyncEnumerator()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at TransactionCompliance.Application.Services.TransactionRepository.GetTransactionHistory(String request) in C:\Users\User\source\repos\TransactionCompliance\TransactionCompliance.Application\Services\TransactionRepository.cs:line 68
+   at TransactionCompliance.API.Controllers.TransactionController.GetTransactionHistory(String request) in C:\Users\User\source\repos\TransactionCompliance\TransactionCompliance.API\Controllers\TransactionController.cs:line 30
+   at lambda_method383(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-11-12 16:57:13.010 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7203/api/v1/Transaction/History - 500 null text/plain; charset=utf-8 13239.6323ms
+2025-11-12 16:57:22.932 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7203/api/v1/Transaction/History - null null
+2025-11-12 16:57:22.941 +02:00 [INF] Executing endpoint 'TransactionCompliance.API.Controllers.TransactionController.GetTransactionHistory (TransactionCompliance.API)'
+2025-11-12 16:57:22.944 +02:00 [INF] Route matched with {action = "GetTransactionHistory", controller = "Transaction"}. Executing controller action with signature System.Threading.Tasks.Task`1[TransactionCompliance.Application.DTO.Common.DataTableResponse`1[TransactionCompliance.Application.DTO.Response.TransactionHistoryResponseModel]] GetTransactionHistory(System.String) on controller TransactionCompliance.API.Controllers.TransactionController (TransactionCompliance.API).
+2025-11-12 16:57:22.982 +02:00 [INF] Executed DbCommand (14ms) [Parameters=[@__mobileNumber_0='?' (Size = 200)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Transactions] AS [t]
+LEFT JOIN [UserAccounts] AS [u] ON [t].[UserAccountId] = [u].[Id]
+WHERE [u].[PhoneNumber] = @__mobileNumber_0
+2025-11-12 16:58:30.275 +02:00 [WRN] No store type was specified for the decimal property 'Amount' on entity type 'Transaction'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-11-12 16:58:33.506 +02:00 [INF] Executed DbCommand (99ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [UserAccounts] AS [u]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-11-12 16:58:33.658 +02:00 [INF] Executed DbCommand (17ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Statuses] AS [s]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-11-12 16:58:33.700 +02:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [TransactionTypes] AS [t]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-11-12 16:58:33.741 +02:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Transactions] AS [t]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-11-12 16:58:34.133 +02:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-11-12 16:58:36.176 +02:00 [INF] Now listening on: https://localhost:7203
+2025-11-12 16:58:36.182 +02:00 [INF] Now listening on: http://localhost:5037
+2025-11-12 16:58:36.595 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-12 16:58:36.601 +02:00 [INF] Hosting environment: Development
+2025-11-12 16:58:36.607 +02:00 [INF] Content root path: C:\Users\User\source\repos\TransactionCompliance\TransactionCompliance.API
+2025-11-12 16:58:37.397 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7203/_framework/aspnetcore-browser-refresh.js - null null
+2025-11-12 16:58:37.484 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7203/_vs/browserLink - null null
+2025-11-12 16:58:37.495 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7203/_framework/aspnetcore-browser-refresh.js - 200 16535 application/javascript; charset=utf-8 144.4177ms
+2025-11-12 16:58:37.836 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7203/_vs/browserLink - 200 null text/javascript; charset=UTF-8 352.461ms
+2025-11-12 16:58:38.051 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7203/swagger/v1/swagger.json - null null
+2025-11-12 16:58:38.467 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7203/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 417.9191ms
+2025-11-12 17:04:03.688 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7203/api/v1/Transaction/History - null null
+2025-11-12 17:04:03.730 +02:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-11-12 17:04:03.740 +02:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-11-12 17:04:03.743 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7203/api/v1/Transaction/History - 401 0 null 55.3902ms
+2025-11-12 17:04:11.809 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7203/api/v1/Transaction/History - null null
+2025-11-12 17:04:11.911 +02:00 [INF] Executing endpoint 'TransactionCompliance.API.Controllers.TransactionController.GetTransactionHistory (TransactionCompliance.API)'
+2025-11-12 17:04:11.948 +02:00 [INF] Route matched with {action = "GetTransactionHistory", controller = "Transaction"}. Executing controller action with signature System.Threading.Tasks.Task`1[TransactionCompliance.Application.DTO.Common.DataTableResponse`1[TransactionCompliance.Application.DTO.Response.TransactionHistoryResponseModel]] GetTransactionHistory(System.String) on controller TransactionCompliance.API.Controllers.TransactionController (TransactionCompliance.API).
+2025-11-12 17:04:12.355 +02:00 [INF] Executed DbCommand (89ms) [Parameters=[@__mobileNumber_0='?' (Size = 200)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Transactions] AS [t]
+LEFT JOIN [UserAccounts] AS [u] ON [t].[UserAccountId] = [u].[Id]
+WHERE [u].[PhoneNumber] = @__mobileNumber_0
+2025-11-12 17:04:12.939 +02:00 [INF] Executed DbCommand (29ms) [Parameters=[@__mobileNumber_0='?' (Size = 200), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t0].[Id], [t0].[CreatedAt], [t1].[Name], [s].[Name], [t0].[Amount], [t0].[AccountNumber], [t0].[CardNumber]
+FROM (
+    SELECT [t].[Id], [t].[AccountNumber], [t].[Amount], [t].[CardNumber], [t].[CreatedAt], [t].[StatusId], [t].[TransactionTypeId]
+    FROM [Transactions] AS [t]
+    LEFT JOIN [UserAccounts] AS [u] ON [t].[UserAccountId] = [u].[Id]
+    WHERE [u].[PhoneNumber] = @__mobileNumber_0
+    ORDER BY [t].[CreatedAt] DESC
+    OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+) AS [t0]
+INNER JOIN [TransactionTypes] AS [t1] ON [t0].[TransactionTypeId] = [t1].[Id]
+INNER JOIN [Statuses] AS [s] ON [t0].[StatusId] = [s].[Id]
+ORDER BY [t0].[CreatedAt] DESC
+2025-11-12 17:04:12.949 +02:00 [INF] User with mobile number +96178964421 accessed transaction history: TransactionHistoryFilter { ToDate = 11/12/2025 5:04:11 PM, FromDate = 11/12/2025 5:04:11 PM, StatusId = 0, TransactionTypeId = 0 }
+2025-11-12 17:04:12.961 +02:00 [INF] Executing ObjectResult, writing value of type 'TransactionCompliance.Application.DTO.Common.DataTableResponse`1[[TransactionCompliance.Application.DTO.Response.TransactionHistoryResponseModel, TransactionCompliance.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-12 17:04:12.990 +02:00 [INF] Executed action TransactionCompliance.API.Controllers.TransactionController.GetTransactionHistory (TransactionCompliance.API) in 1031.3165ms
+2025-11-12 17:04:12.993 +02:00 [INF] Executed endpoint 'TransactionCompliance.API.Controllers.TransactionController.GetTransactionHistory (TransactionCompliance.API)'
+2025-11-12 17:04:13.000 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7203/api/v1/Transaction/History - 200 null application/json; charset=utf-8 1191.177ms
+2025-11-12 17:05:01.534 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7203/swagger/index.html - null null
+2025-11-12 17:05:01.786 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7203/swagger/index.html - 200 null text/html;charset=utf-8 253.1317ms
+2025-11-12 17:05:01.823 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7203/_vs/browserLink - null null
+2025-11-12 17:05:01.829 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7203/_framework/aspnetcore-browser-refresh.js - null null
+2025-11-12 17:05:01.840 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7203/_framework/aspnetcore-browser-refresh.js - 200 16535 application/javascript; charset=utf-8 11.8572ms
+2025-11-12 17:05:01.867 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7203/_vs/browserLink - 200 null text/javascript; charset=UTF-8 43.9825ms
+2025-11-12 17:05:02.075 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7203/swagger/v1/swagger.json - null null
+2025-11-12 17:05:02.098 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7203/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 23.5438ms
+2025-11-12 17:05:10.731 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7203/api/v1/Transaction/History - null null
+2025-11-12 17:05:10.742 +02:00 [INF] Executing endpoint 'TransactionCompliance.API.Controllers.TransactionController.GetTransactionHistory (TransactionCompliance.API)'
+2025-11-12 17:05:10.752 +02:00 [INF] Route matched with {action = "GetTransactionHistory", controller = "Transaction"}. Executing controller action with signature System.Threading.Tasks.Task`1[TransactionCompliance.Application.DTO.Common.DataTableResponse`1[TransactionCompliance.Application.DTO.Response.TransactionHistoryResponseModel]] GetTransactionHistory(System.String) on controller TransactionCompliance.API.Controllers.TransactionController (TransactionCompliance.API).
+2025-11-12 17:05:10.786 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[@__mobileNumber_0='?' (Size = 200)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Transactions] AS [t]
+LEFT JOIN [UserAccounts] AS [u] ON [t].[UserAccountId] = [u].[Id]
+WHERE [u].[PhoneNumber] = @__mobileNumber_0
+2025-11-12 17:05:10.798 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[@__mobileNumber_0='?' (Size = 200), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t0].[Id], [t0].[CreatedAt], [t1].[Name], [s].[Name], [t0].[Amount], [t0].[AccountNumber], [t0].[CardNumber]
+FROM (
+    SELECT [t].[Id], [t].[AccountNumber], [t].[Amount], [t].[CardNumber], [t].[CreatedAt], [t].[StatusId], [t].[TransactionTypeId]
+    FROM [Transactions] AS [t]
+    LEFT JOIN [UserAccounts] AS [u] ON [t].[UserAccountId] = [u].[Id]
+    WHERE [u].[PhoneNumber] = @__mobileNumber_0
+    ORDER BY [t].[CreatedAt] DESC
+    OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+) AS [t0]
+INNER JOIN [TransactionTypes] AS [t1] ON [t0].[TransactionTypeId] = [t1].[Id]
+INNER JOIN [Statuses] AS [s] ON [t0].[StatusId] = [s].[Id]
+ORDER BY [t0].[CreatedAt] DESC
+2025-11-12 17:05:10.802 +02:00 [INF] User with mobile number +96178964421 accessed transaction history: null
+2025-11-12 17:05:10.805 +02:00 [INF] Executing ObjectResult, writing value of type 'TransactionCompliance.Application.DTO.Common.DataTableResponse`1[[TransactionCompliance.Application.DTO.Response.TransactionHistoryResponseModel, TransactionCompliance.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-12 17:05:10.810 +02:00 [INF] Executed action TransactionCompliance.API.Controllers.TransactionController.GetTransactionHistory (TransactionCompliance.API) in 54.997ms
+2025-11-12 17:05:10.813 +02:00 [INF] Executed endpoint 'TransactionCompliance.API.Controllers.TransactionController.GetTransactionHistory (TransactionCompliance.API)'
+2025-11-12 17:05:10.816 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7203/api/v1/Transaction/History - 200 null application/json; charset=utf-8 85.4766ms
+2025-11-12 17:05:35.363 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7203/swagger/index.html - null null
+2025-11-12 17:05:35.410 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7203/swagger/index.html - 200 null text/html;charset=utf-8 47.9274ms
+2025-11-12 17:05:35.445 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7203/_vs/browserLink - null null
+2025-11-12 17:05:35.456 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7203/_framework/aspnetcore-browser-refresh.js - null null
+2025-11-12 17:05:35.479 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7203/_framework/aspnetcore-browser-refresh.js - 200 16535 application/javascript; charset=utf-8 23.3573ms
+2025-11-12 17:05:35.504 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7203/_vs/browserLink - 200 null text/javascript; charset=UTF-8 59.963ms
+2025-11-12 17:05:35.740 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7203/swagger/v1/swagger.json - null null
+2025-11-12 17:05:35.762 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7203/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 23.3265ms
+2025-11-12 17:06:03.481 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7203/api/v1/Transaction/History - null null
+2025-11-12 17:06:03.490 +02:00 [INF] Executing endpoint 'TransactionCompliance.API.Controllers.TransactionController.GetTransactionHistory (TransactionCompliance.API)'
+2025-11-12 17:06:03.496 +02:00 [INF] Route matched with {action = "GetTransactionHistory", controller = "Transaction"}. Executing controller action with signature System.Threading.Tasks.Task`1[TransactionCompliance.Application.DTO.Common.DataTableResponse`1[TransactionCompliance.Application.DTO.Response.TransactionHistoryResponseModel]] GetTransactionHistory(System.String) on controller TransactionCompliance.API.Controllers.TransactionController (TransactionCompliance.API).
+2025-11-12 17:06:07.244 +02:00 [INF] Executed DbCommand (8ms) [Parameters=[@__mobileNumber_0='?' (Size = 200)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[AccountNumber], [t].[AccountNumberMasked], [t].[Amount], [t].[CardNumber], [t].[CardNumberMasked], [t].[CreatedAt], [t].[Currency], [t].[CustomerName], [t].[Description], [t].[ReferenceNumber], [t].[StatusId], [t].[TransactionTypeId], [t].[UserAccountId], [t].[UserId], [u].[Id], [u].[Balance], [u].[CreatedAt], [u].[Currency], [u].[IsActive], [u].[Password], [u].[PhoneNumber], [u].[UserName]
+FROM [Transactions] AS [t]
+LEFT JOIN [UserAccounts] AS [u] ON [t].[UserAccountId] = [u].[Id]
+WHERE [u].[PhoneNumber] = @__mobileNumber_0
+2025-11-12 17:07:28.483 +02:00 [WRN] No store type was specified for the decimal property 'Amount' on entity type 'Transaction'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-11-12 17:07:29.177 +02:00 [INF] Executed DbCommand (30ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [UserAccounts] AS [u]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-11-12 17:07:29.212 +02:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Statuses] AS [s]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-11-12 17:07:29.223 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [TransactionTypes] AS [t]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-11-12 17:07:29.236 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Transactions] AS [t]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-11-12 17:07:29.342 +02:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-11-12 17:07:29.636 +02:00 [INF] Now listening on: https://localhost:7203
+2025-11-12 17:07:29.638 +02:00 [INF] Now listening on: http://localhost:5037
+2025-11-12 17:07:29.761 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-12 17:07:29.765 +02:00 [INF] Hosting environment: Development
+2025-11-12 17:07:29.768 +02:00 [INF] Content root path: C:\Users\User\source\repos\TransactionCompliance\TransactionCompliance.API
+2025-11-12 17:07:30.032 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7203/swagger/index.html - null null
+2025-11-12 17:07:30.374 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7203/swagger/index.html - 200 null text/html;charset=utf-8 351.1265ms
+2025-11-12 17:07:30.419 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7203/_vs/browserLink - null null
+2025-11-12 17:07:30.419 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7203/_framework/aspnetcore-browser-refresh.js - null null
+2025-11-12 17:07:30.449 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7203/_framework/aspnetcore-browser-refresh.js - 200 16535 application/javascript; charset=utf-8 28.1524ms
+2025-11-12 17:07:30.487 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7203/_vs/browserLink - 200 null text/javascript; charset=UTF-8 68.2338ms
+2025-11-12 17:07:30.513 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7203/swagger/v1/swagger.json - null null
+2025-11-12 17:07:30.527 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7203/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 15.2121ms
+2025-11-12 17:07:39.287 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7203/api/v1/Transaction/History - null null
+2025-11-12 17:07:39.417 +02:00 [INF] Executing endpoint 'TransactionCompliance.API.Controllers.TransactionController.GetTransactionHistory (TransactionCompliance.API)'
+2025-11-12 17:07:39.455 +02:00 [INF] Route matched with {action = "GetTransactionHistory", controller = "Transaction"}. Executing controller action with signature System.Threading.Tasks.Task`1[TransactionCompliance.Application.DTO.Common.DataTableResponse`1[TransactionCompliance.Application.DTO.Response.TransactionHistoryResponseModel]] GetTransactionHistory(System.String) on controller TransactionCompliance.API.Controllers.TransactionController (TransactionCompliance.API).
+2025-11-12 17:07:39.830 +02:00 [INF] Executed DbCommand (78ms) [Parameters=[@__mobileNumber_0='?' (Size = 200)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Transactions] AS [t]
+LEFT JOIN [UserAccounts] AS [u] ON [t].[UserAccountId] = [u].[Id]
+WHERE [u].[PhoneNumber] = @__mobileNumber_0
+2025-11-12 17:07:40.538 +02:00 [INF] Executed DbCommand (17ms) [Parameters=[@__mobileNumber_0='?' (Size = 200), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t0].[Id], [t0].[CreatedAt], [t1].[Name], [s].[Name], [t0].[Amount], [t0].[AccountNumber], [t0].[CardNumber]
+FROM (
+    SELECT [t].[Id], [t].[AccountNumber], [t].[Amount], [t].[CardNumber], [t].[CreatedAt], [t].[StatusId], [t].[TransactionTypeId]
+    FROM [Transactions] AS [t]
+    LEFT JOIN [UserAccounts] AS [u] ON [t].[UserAccountId] = [u].[Id]
+    WHERE [u].[PhoneNumber] = @__mobileNumber_0
+    ORDER BY [t].[CreatedAt] DESC
+    OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+) AS [t0]
+INNER JOIN [TransactionTypes] AS [t1] ON [t0].[TransactionTypeId] = [t1].[Id]
+INNER JOIN [Statuses] AS [s] ON [t0].[StatusId] = [s].[Id]
+ORDER BY [t0].[CreatedAt] DESC
+2025-11-12 17:07:40.554 +02:00 [INF] User with mobile number +96178964421 accessed transaction history: null
+2025-11-12 17:07:40.568 +02:00 [INF] Executing ObjectResult, writing value of type 'TransactionCompliance.Application.DTO.Common.DataTableResponse`1[[TransactionCompliance.Application.DTO.Response.TransactionHistoryResponseModel, TransactionCompliance.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-12 17:07:40.593 +02:00 [INF] Executed action TransactionCompliance.API.Controllers.TransactionController.GetTransactionHistory (TransactionCompliance.API) in 1126.887ms
+2025-11-12 17:07:40.596 +02:00 [INF] Executed endpoint 'TransactionCompliance.API.Controllers.TransactionController.GetTransactionHistory (TransactionCompliance.API)'
+2025-11-12 17:07:40.603 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7203/api/v1/Transaction/History - 200 null application/json; charset=utf-8 1317.4082ms
+2025-11-12 17:07:51.500 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7203/api/v1/Transaction/History - null null
+2025-11-12 17:07:51.512 +02:00 [INF] Executing endpoint 'TransactionCompliance.API.Controllers.TransactionController.GetTransactionHistory (TransactionCompliance.API)'
+2025-11-12 17:07:51.514 +02:00 [INF] Route matched with {action = "GetTransactionHistory", controller = "Transaction"}. Executing controller action with signature System.Threading.Tasks.Task`1[TransactionCompliance.Application.DTO.Common.DataTableResponse`1[TransactionCompliance.Application.DTO.Response.TransactionHistoryResponseModel]] GetTransactionHistory(System.String) on controller TransactionCompliance.API.Controllers.TransactionController (TransactionCompliance.API).
+2025-11-12 17:07:53.930 +02:00 [INF] Executed DbCommand (6ms) [Parameters=[@__mobileNumber_0='?' (Size = 200)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[AccountNumber], [t].[AccountNumberMasked], [t].[Amount], [t].[CardNumber], [t].[CardNumberMasked], [t].[CreatedAt], [t].[Currency], [t].[CustomerName], [t].[Description], [t].[ReferenceNumber], [t].[StatusId], [t].[TransactionTypeId], [t].[UserAccountId], [t].[UserId], [u].[Id], [u].[Balance], [u].[CreatedAt], [u].[Currency], [u].[IsActive], [u].[Password], [u].[PhoneNumber], [u].[UserName]
+FROM [Transactions] AS [t]
+LEFT JOIN [UserAccounts] AS [u] ON [t].[UserAccountId] = [u].[Id]
+WHERE [u].[PhoneNumber] = @__mobileNumber_0
+2025-11-12 17:09:53.183 +02:00 [WRN] No store type was specified for the decimal property 'Amount' on entity type 'Transaction'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-11-12 17:09:54.035 +02:00 [INF] Executed DbCommand (33ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [UserAccounts] AS [u]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-11-12 17:09:54.088 +02:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Statuses] AS [s]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-11-12 17:09:54.100 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [TransactionTypes] AS [t]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-11-12 17:09:54.114 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Transactions] AS [t]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-11-12 17:09:54.238 +02:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-11-12 17:09:54.500 +02:00 [INF] Now listening on: https://localhost:7203
+2025-11-12 17:09:54.502 +02:00 [INF] Now listening on: http://localhost:5037
+2025-11-12 17:09:54.650 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-12 17:09:54.653 +02:00 [INF] Hosting environment: Development
+2025-11-12 17:09:54.655 +02:00 [INF] Content root path: C:\Users\User\source\repos\TransactionCompliance\TransactionCompliance.API
+2025-11-12 17:09:54.977 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7203/swagger/index.html - null null
+2025-11-12 17:09:55.304 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7203/swagger/index.html - 200 null text/html;charset=utf-8 340.7111ms
+2025-11-12 17:09:55.310 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7203/_framework/aspnetcore-browser-refresh.js - null null
+2025-11-12 17:09:55.325 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7203/_framework/aspnetcore-browser-refresh.js - 200 16535 application/javascript; charset=utf-8 14.2429ms
+2025-11-12 17:09:55.336 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7203/_vs/browserLink - null null
+2025-11-12 17:09:55.405 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7203/_vs/browserLink - 200 null text/javascript; charset=UTF-8 70.0645ms
+2025-11-12 17:09:55.442 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7203/swagger/v1/swagger.json - null null
+2025-11-12 17:09:55.462 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7203/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 20.9394ms
+2025-11-12 17:10:51.091 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7203/api/v1/Transaction/History - null null
+2025-11-12 17:10:51.179 +02:00 [INF] Executing endpoint 'TransactionCompliance.API.Controllers.TransactionController.GetTransactionHistory (TransactionCompliance.API)'
+2025-11-12 17:10:51.213 +02:00 [INF] Route matched with {action = "GetTransactionHistory", controller = "Transaction"}. Executing controller action with signature System.Threading.Tasks.Task`1[TransactionCompliance.Application.DTO.Common.DataTableResponse`1[TransactionCompliance.Application.DTO.Response.TransactionHistoryResponseModel]] GetTransactionHistory(System.String) on controller TransactionCompliance.API.Controllers.TransactionController (TransactionCompliance.API).
+2025-11-12 17:10:51.362 +02:00 [INF] Executed action TransactionCompliance.API.Controllers.TransactionController.GetTransactionHistory (TransactionCompliance.API) in 140.9711ms
+2025-11-12 17:10:51.367 +02:00 [INF] Executed endpoint 'TransactionCompliance.API.Controllers.TransactionController.GetTransactionHistory (TransactionCompliance.API)'
+2025-11-12 17:10:51.373 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+System.ArgumentNullException: Value cannot be null. (Parameter 's')
+   at System.Int32.Parse(String s)
+   at TransactionCompliance.Application.Services.TransactionRepository.GetTransactionHistory(String request) in C:\Users\User\source\repos\TransactionCompliance\TransactionCompliance.Application\Services\TransactionRepository.cs:line 54
+   at TransactionCompliance.API.Controllers.TransactionController.GetTransactionHistory(String request) in C:\Users\User\source\repos\TransactionCompliance\TransactionCompliance.API\Controllers\TransactionController.cs:line 30
+   at lambda_method17(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-11-12 17:10:51.449 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7203/api/v1/Transaction/History - 500 null text/plain; charset=utf-8 358.1613ms
+2025-11-12 17:11:01.091 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7203/api/v1/Transaction/History - null null
+2025-11-12 17:11:01.104 +02:00 [INF] Executing endpoint 'TransactionCompliance.API.Controllers.TransactionController.GetTransactionHistory (TransactionCompliance.API)'
+2025-11-12 17:11:01.107 +02:00 [INF] Route matched with {action = "GetTransactionHistory", controller = "Transaction"}. Executing controller action with signature System.Threading.Tasks.Task`1[TransactionCompliance.Application.DTO.Common.DataTableResponse`1[TransactionCompliance.Application.DTO.Response.TransactionHistoryResponseModel]] GetTransactionHistory(System.String) on controller TransactionCompliance.API.Controllers.TransactionController (TransactionCompliance.API).
+2025-11-12 17:12:34.134 +02:00 [WRN] No store type was specified for the decimal property 'Amount' on entity type 'Transaction'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-11-12 17:12:34.993 +02:00 [INF] Executed DbCommand (35ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [UserAccounts] AS [u]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-11-12 17:12:35.043 +02:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Statuses] AS [s]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-11-12 17:12:35.053 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [TransactionTypes] AS [t]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-11-12 17:12:35.066 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Transactions] AS [t]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-11-12 17:12:35.187 +02:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-11-12 17:12:35.442 +02:00 [INF] Now listening on: https://localhost:7203
+2025-11-12 17:12:35.444 +02:00 [INF] Now listening on: http://localhost:5037
+2025-11-12 17:12:35.598 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-12 17:12:35.599 +02:00 [INF] Hosting environment: Development
+2025-11-12 17:12:35.600 +02:00 [INF] Content root path: C:\Users\User\source\repos\TransactionCompliance\TransactionCompliance.API
+2025-11-12 17:12:35.925 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7203/swagger/index.html - null null
+2025-11-12 17:12:36.260 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7203/swagger/index.html - 200 null text/html;charset=utf-8 348.7912ms
+2025-11-12 17:12:36.268 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7203/_framework/aspnetcore-browser-refresh.js - null null
+2025-11-12 17:12:36.281 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7203/_framework/aspnetcore-browser-refresh.js - 200 16535 application/javascript; charset=utf-8 13.9682ms
+2025-11-12 17:12:36.293 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7203/_vs/browserLink - null null
+2025-11-12 17:12:36.359 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7203/_vs/browserLink - 200 null text/javascript; charset=UTF-8 67.5505ms
+2025-11-12 17:12:36.393 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7203/swagger/v1/swagger.json - null null
+2025-11-12 17:12:36.416 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7203/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 23.2563ms
+2025-11-12 17:13:34.294 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7203/api/v1/Transaction/Login - application/json 56
+2025-11-12 17:13:34.312 +02:00 [INF] Executing endpoint 'TransactionCompliance.API.Controllers.TransactionController.Login (TransactionCompliance.API)'
+2025-11-12 17:13:34.335 +02:00 [INF] Route matched with {action = "Login", controller = "Transaction"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.String] Login(TransactionCompliance.Application.DTO.Request.LoginRequestModel) on controller TransactionCompliance.API.Controllers.TransactionController (TransactionCompliance.API).
+2025-11-12 17:13:34.567 +02:00 [INF] Executed DbCommand (53ms) [Parameters=[@__request_Username_0='?' (Size = 100), @__request_Password_1='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Balance], [u].[CreatedAt], [u].[Currency], [u].[IsActive], [u].[Password], [u].[PhoneNumber], [u].[UserName]
+FROM [UserAccounts] AS [u]
+WHERE [u].[UserName] = @__request_Username_0 AND [u].[Password] = @__request_Password_1
+2025-11-12 17:13:34.697 +02:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2025-11-12 17:13:34.703 +02:00 [INF] Executed action TransactionCompliance.API.Controllers.TransactionController.Login (TransactionCompliance.API) in 361.631ms
+2025-11-12 17:13:34.705 +02:00 [INF] Executed endpoint 'TransactionCompliance.API.Controllers.TransactionController.Login (TransactionCompliance.API)'
+2025-11-12 17:13:34.712 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7203/api/v1/Transaction/Login - 200 null text/plain; charset=utf-8 418.7951ms
+2025-11-12 17:14:08.954 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7203/api/v1/Transaction/History - null null
+2025-11-12 17:14:09.022 +02:00 [INF] Executing endpoint 'TransactionCompliance.API.Controllers.TransactionController.GetTransactionHistory (TransactionCompliance.API)'
+2025-11-12 17:14:09.030 +02:00 [INF] Route matched with {action = "GetTransactionHistory", controller = "Transaction"}. Executing controller action with signature System.Threading.Tasks.Task`1[TransactionCompliance.Application.DTO.Common.DataTableResponse`1[TransactionCompliance.Application.DTO.Response.TransactionHistoryResponseModel]] GetTransactionHistory(System.String) on controller TransactionCompliance.API.Controllers.TransactionController (TransactionCompliance.API).
+2025-11-12 17:14:39.848 +02:00 [INF] Executed DbCommand (19ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[AccountNumber], [t].[AccountNumberMasked], [t].[Amount], [t].[CardNumber], [t].[CardNumberMasked], [t].[CreatedAt], [t].[Currency], [t].[CustomerName], [t].[Description], [t].[ReferenceNumber], [t].[StatusId], [t].[TransactionTypeId], [t].[UserAccountId], [t].[UserId], [u].[Id], [u].[Balance], [u].[CreatedAt], [u].[Currency], [u].[IsActive], [u].[Password], [u].[PhoneNumber], [u].[UserName]
+FROM [Transactions] AS [t]
+LEFT JOIN [UserAccounts] AS [u] ON [t].[UserAccountId] = [u].[Id]
+WHERE [t].[UserId] = @__userId_0
+2025-11-12 17:14:42.004 +02:00 [INF] Executed DbCommand (5ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Transactions] AS [t]
+WHERE [t].[UserId] = @__userId_0
+2025-11-12 17:14:42.304 +02:00 [INF] Executed DbCommand (16ms) [Parameters=[@__userId_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t0].[Id], [t0].[CreatedAt], [t1].[Name], [s].[Name], [t0].[Amount], [t0].[AccountNumber], [t0].[CardNumber]
+FROM (
+    SELECT [t].[Id], [t].[AccountNumber], [t].[Amount], [t].[CardNumber], [t].[CreatedAt], [t].[StatusId], [t].[TransactionTypeId]
+    FROM [Transactions] AS [t]
+    WHERE [t].[UserId] = @__userId_0
+    ORDER BY [t].[CreatedAt] DESC
+    OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+) AS [t0]
+INNER JOIN [TransactionTypes] AS [t1] ON [t0].[TransactionTypeId] = [t1].[Id]
+INNER JOIN [Statuses] AS [s] ON [t0].[StatusId] = [s].[Id]
+ORDER BY [t0].[CreatedAt] DESC
+2025-11-12 17:14:42.308 +02:00 [INF] User 1 accessed transaction history: null
+2025-11-12 17:14:42.310 +02:00 [INF] Executing ObjectResult, writing value of type 'TransactionCompliance.Application.DTO.Common.DataTableResponse`1[[TransactionCompliance.Application.DTO.Response.TransactionHistoryResponseModel, TransactionCompliance.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-12 17:14:42.324 +02:00 [INF] Executed action TransactionCompliance.API.Controllers.TransactionController.GetTransactionHistory (TransactionCompliance.API) in 33290.1415ms
+2025-11-12 17:14:42.335 +02:00 [INF] Executed endpoint 'TransactionCompliance.API.Controllers.TransactionController.GetTransactionHistory (TransactionCompliance.API)'
+2025-11-12 17:14:42.336 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7203/api/v1/Transaction/History - 200 null application/json; charset=utf-8 33382.4684ms

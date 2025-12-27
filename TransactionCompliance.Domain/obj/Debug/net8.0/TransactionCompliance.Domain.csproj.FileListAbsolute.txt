@@ -1,0 +1,15 @@
+C:\Users\User\source\repos\TransactionCompliance\TransactionCompliance.Domain\bin\Debug\net8.0\TransactionCompliance.Domain.deps.json
+C:\Users\User\source\repos\TransactionCompliance\TransactionCompliance.Domain\bin\Debug\net8.0\TransactionCompliance.Domain.runtimeconfig.json
+C:\Users\User\source\repos\TransactionCompliance\TransactionCompliance.Domain\bin\Debug\net8.0\TransactionCompliance.Domain.dll
+C:\Users\User\source\repos\TransactionCompliance\TransactionCompliance.Domain\bin\Debug\net8.0\TransactionCompliance.Domain.pdb
+C:\Users\User\source\repos\TransactionCompliance\TransactionCompliance.Domain\obj\Debug\net8.0\TransactionCompliance.Domain.csproj.AssemblyReference.cache
+C:\Users\User\source\repos\TransactionCompliance\TransactionCompliance.Domain\obj\Debug\net8.0\TransactionCompliance.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\source\repos\TransactionCompliance\TransactionCompliance.Domain\obj\Debug\net8.0\TransactionCompliance.Domain.AssemblyInfoInputs.cache
+C:\Users\User\source\repos\TransactionCompliance\TransactionCompliance.Domain\obj\Debug\net8.0\TransactionCompliance.Domain.AssemblyInfo.cs
+C:\Users\User\source\repos\TransactionCompliance\TransactionCompliance.Domain\obj\Debug\net8.0\TransactionCompliance.Domain.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\TransactionCompliance\TransactionCompliance.Domain\obj\Debug\net8.0\TransactionCompliance.Domain.sourcelink.json
+C:\Users\User\source\repos\TransactionCompliance\TransactionCompliance.Domain\obj\Debug\net8.0\TransactionCompliance.Domain.dll
+C:\Users\User\source\repos\TransactionCompliance\TransactionCompliance.Domain\obj\Debug\net8.0\refint\TransactionCompliance.Domain.dll
+C:\Users\User\source\repos\TransactionCompliance\TransactionCompliance.Domain\obj\Debug\net8.0\TransactionCompliance.Domain.pdb
+C:\Users\User\source\repos\TransactionCompliance\TransactionCompliance.Domain\obj\Debug\net8.0\TransactionCompliance.Domain.genruntimeconfig.cache
+C:\Users\User\source\repos\TransactionCompliance\TransactionCompliance.Domain\obj\Debug\net8.0\ref\TransactionCompliance.Domain.dll

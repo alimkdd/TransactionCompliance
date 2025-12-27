@@ -1,0 +1,22 @@
+[
+  {
+    "Name": "Deposit",
+    "Description": "Money deposited into account",
+    "CreatedAt": "2025-11-10T09:03:35.5000000"
+  },
+  {
+    "Name": "Withdrawal",
+    "Description": "Money withdrawn from account",
+    "CreatedAt": "2025-11-10T09:03:35.5000000"
+  },
+  {
+    "Name": "Transfer",
+    "Description": "Money transferred to another account",
+    "CreatedAt": "2025-11-10T09:03:35.5000000"
+  },
+  {
+    "Name": "Payment",
+    "Description": "Payment to a vendor or service",
+    "CreatedAt": "2025-11-10T09:03:35.5000000"
+  }
+]

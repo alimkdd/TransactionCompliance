@@ -1,0 +1,605 @@
+2025-11-13 09:39:09.340 +02:00 [WRN] No store type was specified for the decimal property 'Amount' on entity type 'Transaction'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-11-13 09:39:10.274 +02:00 [INF] Executed DbCommand (89ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [UserAccounts] AS [u]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-11-13 09:39:10.317 +02:00 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Statuses] AS [s]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-11-13 09:39:10.335 +02:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [TransactionTypes] AS [t]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-11-13 09:39:10.348 +02:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Transactions] AS [t]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-11-13 09:39:10.457 +02:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-11-13 09:39:10.780 +02:00 [INF] Now listening on: https://localhost:7203
+2025-11-13 09:39:10.782 +02:00 [INF] Now listening on: http://localhost:5037
+2025-11-13 09:39:10.865 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-13 09:39:10.866 +02:00 [INF] Hosting environment: Development
+2025-11-13 09:39:10.867 +02:00 [INF] Content root path: C:\Users\User\source\repos\TransactionCompliance\TransactionCompliance.API
+2025-11-13 09:39:11.834 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7203/swagger/index.html - null null
+2025-11-13 09:39:12.270 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7203/_framework/aspnetcore-browser-refresh.js - null null
+2025-11-13 09:39:12.274 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7203/swagger/index.html - 200 null text/html;charset=utf-8 452.9547ms
+2025-11-13 09:39:12.291 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7203/_framework/aspnetcore-browser-refresh.js - 200 16535 application/javascript; charset=utf-8 20.8762ms
+2025-11-13 09:39:12.295 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7203/_vs/browserLink - null null
+2025-11-13 09:39:12.371 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7203/_vs/browserLink - 200 null text/javascript; charset=UTF-8 76.3599ms
+2025-11-13 09:39:12.404 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7203/swagger/v1/swagger.json - null null
+2025-11-13 09:39:12.427 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7203/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 23.4421ms
+2025-11-13 09:39:54.823 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7203/api/v1/Transaction/History - null null
+2025-11-13 09:39:54.854 +02:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-11-13 09:39:54.859 +02:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-11-13 09:39:54.862 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7203/api/v1/Transaction/History - 401 0 null 38.429ms
+2025-11-13 09:40:04.496 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7203/api/v1/Transaction/Login - application/json 56
+2025-11-13 09:40:04.508 +02:00 [INF] Executing endpoint 'TransactionCompliance.API.Controllers.TransactionController.Login (TransactionCompliance.API)'
+2025-11-13 09:40:04.545 +02:00 [INF] Route matched with {action = "Login", controller = "Transaction"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.String] Login(TransactionCompliance.Application.DTO.Request.LoginRequestModel) on controller TransactionCompliance.API.Controllers.TransactionController (TransactionCompliance.API).
+2025-11-13 09:40:04.834 +02:00 [INF] Executed DbCommand (73ms) [Parameters=[@__request_Username_0='?' (Size = 100), @__request_Password_1='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Balance], [u].[CreatedAt], [u].[Currency], [u].[IsActive], [u].[Password], [u].[PhoneNumber], [u].[UserName]
+FROM [UserAccounts] AS [u]
+WHERE [u].[UserName] = @__request_Username_0 AND [u].[Password] = @__request_Password_1
+2025-11-13 09:40:04.966 +02:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2025-11-13 09:40:04.975 +02:00 [INF] Executed action TransactionCompliance.API.Controllers.TransactionController.Login (TransactionCompliance.API) in 420.2833ms
+2025-11-13 09:40:04.979 +02:00 [INF] Executed endpoint 'TransactionCompliance.API.Controllers.TransactionController.Login (TransactionCompliance.API)'
+2025-11-13 09:40:04.986 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7203/api/v1/Transaction/Login - 200 null text/plain; charset=utf-8 489.8535ms
+2025-11-13 09:40:17.930 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7203/api/v1/Transaction/History - null null
+2025-11-13 09:40:17.997 +02:00 [INF] Executing endpoint 'TransactionCompliance.API.Controllers.TransactionController.GetTransactionHistory (TransactionCompliance.API)'
+2025-11-13 09:40:18.006 +02:00 [INF] Route matched with {action = "GetTransactionHistory", controller = "Transaction"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TransactionCompliance.Application.DTO.Common.DataTableResponse`1[TransactionCompliance.Application.DTO.Response.TransactionHistoryResponseModel]]] GetTransactionHistory(System.String) on controller TransactionCompliance.API.Controllers.TransactionController (TransactionCompliance.API).
+2025-11-13 09:40:18.649 +02:00 [INF] Executed DbCommand (15ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Transactions] AS [t]
+WHERE [t].[UserId] = @__userId_0
+2025-11-13 09:40:19.294 +02:00 [INF] Executed DbCommand (27ms) [Parameters=[@__userId_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t0].[Id], CAST(0 AS bit), [t1].[Id], [t1].[CreatedAt], [t1].[Description], [t1].[Name], [t1].[UpdatedAt], CAST(0 AS bit), [s].[Id], [s].[CreatedAt], [s].[Description], [s].[Name], [t0].[Amount], [t0].[AccountNumberMasked], [t0].[CardNumberMasked]
+FROM (
+    SELECT [t].[Id], [t].[AccountNumberMasked], [t].[Amount], [t].[CardNumberMasked], [t].[CreatedAt], [t].[StatusId], [t].[TransactionTypeId]
+    FROM [Transactions] AS [t]
+    WHERE [t].[UserId] = @__userId_0
+    ORDER BY [t].[CreatedAt] DESC
+    OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+) AS [t0]
+INNER JOIN [TransactionTypes] AS [t1] ON [t0].[TransactionTypeId] = [t1].[Id]
+INNER JOIN [Statuses] AS [s] ON [t0].[StatusId] = [s].[Id]
+ORDER BY [t0].[CreatedAt] DESC
+2025-11-13 09:40:19.303 +02:00 [INF] Transaction history accessed by user {"UserId":1,"RequestTime":"2025-11-13T07:40:19.2995124Z","Filter":null,"SortColumn":"CreatedAt","SortDirection":"desc","PageIndex":null,"PageSize":50,"RecordCount":2}
+2025-11-13 09:40:19.316 +02:00 [INF] Executing ObjectResult, writing value of type 'TransactionCompliance.Application.DTO.Common.DataTableResponse`1[[TransactionCompliance.Application.DTO.Response.TransactionHistoryResponseModel, TransactionCompliance.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-13 09:40:19.334 +02:00 [INF] Executed action TransactionCompliance.API.Controllers.TransactionController.GetTransactionHistory (TransactionCompliance.API) in 1323.4836ms
+2025-11-13 09:40:19.336 +02:00 [INF] Executed endpoint 'TransactionCompliance.API.Controllers.TransactionController.GetTransactionHistory (TransactionCompliance.API)'
+2025-11-13 09:40:19.337 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7203/api/v1/Transaction/History - 200 null application/json; charset=utf-8 1408.6757ms
+2025-11-13 09:44:34.449 +02:00 [WRN] No store type was specified for the decimal property 'Amount' on entity type 'Transaction'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-11-13 09:44:37.219 +02:00 [INF] Executed DbCommand (2,109ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [UserAccounts] AS [u]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-11-13 09:44:37.263 +02:00 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Statuses] AS [s]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-11-13 09:44:37.274 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [TransactionTypes] AS [t]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-11-13 09:44:37.283 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Transactions] AS [t]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-11-13 09:44:37.361 +02:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-11-13 09:44:37.637 +02:00 [INF] Now listening on: https://localhost:7203
+2025-11-13 09:44:37.638 +02:00 [INF] Now listening on: http://localhost:5037
+2025-11-13 09:44:37.759 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-13 09:44:37.761 +02:00 [INF] Hosting environment: Development
+2025-11-13 09:44:37.764 +02:00 [INF] Content root path: C:\Users\User\source\repos\TransactionCompliance\TransactionCompliance.API
+2025-11-13 09:44:38.018 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7203/swagger/index.html - null null
+2025-11-13 09:44:38.318 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7203/swagger/index.html - 200 null text/html;charset=utf-8 315.0976ms
+2025-11-13 09:44:38.322 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7203/_framework/aspnetcore-browser-refresh.js - null null
+2025-11-13 09:44:38.337 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7203/_framework/aspnetcore-browser-refresh.js - 200 16535 application/javascript; charset=utf-8 17.2937ms
+2025-11-13 09:44:38.338 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7203/_vs/browserLink - null null
+2025-11-13 09:44:38.411 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7203/_vs/browserLink - 200 null text/javascript; charset=UTF-8 73.1076ms
+2025-11-13 09:44:38.436 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7203/swagger/v1/swagger.json - null null
+2025-11-13 09:44:38.455 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7203/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 19.2478ms
+2025-11-13 09:45:13.781 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7203/api/v1/Transaction/History?request=%7B%22PageIndex%22%3A0%2C%22PageSize%22%3A50%2C%22SortCol%22%3A%22Id%22%2C%22SortDirection%22%3A%22asc%22%2C%22TableFilter%22%3A%7B%22Status%22%3A%221%22%7D%7D - null null
+2025-11-13 09:45:13.888 +02:00 [INF] Executing endpoint 'TransactionCompliance.API.Controllers.TransactionController.GetTransactionHistory (TransactionCompliance.API)'
+2025-11-13 09:45:13.918 +02:00 [INF] Route matched with {action = "GetTransactionHistory", controller = "Transaction"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TransactionCompliance.Application.DTO.Common.DataTableResponse`1[TransactionCompliance.Application.DTO.Response.TransactionHistoryResponseModel]]] GetTransactionHistory(System.String) on controller TransactionCompliance.API.Controllers.TransactionController (TransactionCompliance.API).
+2025-11-13 09:45:14.205 +02:00 [INF] Executed DbCommand (60ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Transactions] AS [t]
+WHERE [t].[UserId] = @__userId_0
+2025-11-13 09:45:14.650 +02:00 [INF] Executed DbCommand (22ms) [Parameters=[@__userId_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t0].[Id], CAST(0 AS bit), [t1].[Id], [t1].[CreatedAt], [t1].[Description], [t1].[Name], [t1].[UpdatedAt], CAST(0 AS bit), [s].[Id], [s].[CreatedAt], [s].[Description], [s].[Name], [t0].[Amount], [t0].[AccountNumberMasked], [t0].[CardNumberMasked]
+FROM (
+    SELECT [t].[Id], [t].[AccountNumberMasked], [t].[Amount], [t].[CardNumberMasked], [t].[StatusId], [t].[TransactionTypeId]
+    FROM [Transactions] AS [t]
+    WHERE [t].[UserId] = @__userId_0
+    ORDER BY [t].[Id]
+    OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+) AS [t0]
+INNER JOIN [TransactionTypes] AS [t1] ON [t0].[TransactionTypeId] = [t1].[Id]
+INNER JOIN [Statuses] AS [s] ON [t0].[StatusId] = [s].[Id]
+ORDER BY [t0].[Id]
+2025-11-13 09:45:14.665 +02:00 [INF] Transaction history accessed by user {"UserId":1,"RequestTime":"2025-11-13T07:45:14.6620308Z","Filter":{"ToDate":"0001-01-01T00:00:00.0000000","FromDate":"0001-01-01T00:00:00.0000000","StatusId":0,"TransactionTypeId":0,"$type":"TransactionHistoryFilter"},"SortColumn":"Id","SortDirection":"asc","PageIndex":0,"PageSize":50,"RecordCount":2}
+2025-11-13 09:45:14.688 +02:00 [INF] Executing ObjectResult, writing value of type 'TransactionCompliance.Application.DTO.Common.DataTableResponse`1[[TransactionCompliance.Application.DTO.Response.TransactionHistoryResponseModel, TransactionCompliance.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-13 09:45:14.704 +02:00 [INF] Executed action TransactionCompliance.API.Controllers.TransactionController.GetTransactionHistory (TransactionCompliance.API) in 779.6658ms
+2025-11-13 09:45:14.706 +02:00 [INF] Executed endpoint 'TransactionCompliance.API.Controllers.TransactionController.GetTransactionHistory (TransactionCompliance.API)'
+2025-11-13 09:45:14.711 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7203/api/v1/Transaction/History?request=%7B%22PageIndex%22%3A0%2C%22PageSize%22%3A50%2C%22SortCol%22%3A%22Id%22%2C%22SortDirection%22%3A%22asc%22%2C%22TableFilter%22%3A%7B%22Status%22%3A%221%22%7D%7D - 200 null application/json; charset=utf-8 930.6459ms
+2025-11-13 09:45:47.228 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7203/api/v1/Transaction/History?request=%7B%22PageIndex%22%3A0%2C%22PageSize%22%3A50%2C%22SortCol%22%3A%22Id%22%2C%22SortDirection%22%3A%22asc%22%2C%22TableFilter%22%3A%7B%22Status%22%3A%221%22%7D%7D - null null
+2025-11-13 09:45:47.252 +02:00 [INF] Executing endpoint 'TransactionCompliance.API.Controllers.TransactionController.GetTransactionHistory (TransactionCompliance.API)'
+2025-11-13 09:45:47.254 +02:00 [INF] Route matched with {action = "GetTransactionHistory", controller = "Transaction"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TransactionCompliance.Application.DTO.Common.DataTableResponse`1[TransactionCompliance.Application.DTO.Response.TransactionHistoryResponseModel]]] GetTransactionHistory(System.String) on controller TransactionCompliance.API.Controllers.TransactionController (TransactionCompliance.API).
+2025-11-13 09:46:16.877 +02:00 [INF] Executed DbCommand (11ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Transactions] AS [t]
+WHERE [t].[UserId] = @__userId_0
+2025-11-13 09:46:16.899 +02:00 [INF] Executed DbCommand (14ms) [Parameters=[@__userId_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t0].[Id], CAST(0 AS bit), [t1].[Id], [t1].[CreatedAt], [t1].[Description], [t1].[Name], [t1].[UpdatedAt], CAST(0 AS bit), [s].[Id], [s].[CreatedAt], [s].[Description], [s].[Name], [t0].[Amount], [t0].[AccountNumberMasked], [t0].[CardNumberMasked]
+FROM (
+    SELECT [t].[Id], [t].[AccountNumberMasked], [t].[Amount], [t].[CardNumberMasked], [t].[StatusId], [t].[TransactionTypeId]
+    FROM [Transactions] AS [t]
+    WHERE [t].[UserId] = @__userId_0
+    ORDER BY [t].[Id]
+    OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+) AS [t0]
+INNER JOIN [TransactionTypes] AS [t1] ON [t0].[TransactionTypeId] = [t1].[Id]
+INNER JOIN [Statuses] AS [s] ON [t0].[StatusId] = [s].[Id]
+ORDER BY [t0].[Id]
+2025-11-13 09:46:16.906 +02:00 [INF] Transaction history accessed by user {"UserId":1,"RequestTime":"2025-11-13T07:46:16.9048595Z","Filter":{"ToDate":"0001-01-01T00:00:00.0000000","FromDate":"0001-01-01T00:00:00.0000000","StatusId":0,"TransactionTypeId":0,"$type":"TransactionHistoryFilter"},"SortColumn":"Id","SortDirection":"asc","PageIndex":0,"PageSize":50,"RecordCount":2}
+2025-11-13 09:46:16.921 +02:00 [INF] Executing ObjectResult, writing value of type 'TransactionCompliance.Application.DTO.Common.DataTableResponse`1[[TransactionCompliance.Application.DTO.Response.TransactionHistoryResponseModel, TransactionCompliance.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-13 09:46:16.924 +02:00 [INF] Executed action TransactionCompliance.API.Controllers.TransactionController.GetTransactionHistory (TransactionCompliance.API) in 29665.8266ms
+2025-11-13 09:46:16.926 +02:00 [INF] Executed endpoint 'TransactionCompliance.API.Controllers.TransactionController.GetTransactionHistory (TransactionCompliance.API)'
+2025-11-13 09:46:16.931 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7203/api/v1/Transaction/History?request=%7B%22PageIndex%22%3A0%2C%22PageSize%22%3A50%2C%22SortCol%22%3A%22Id%22%2C%22SortDirection%22%3A%22asc%22%2C%22TableFilter%22%3A%7B%22Status%22%3A%221%22%7D%7D - 200 null application/json; charset=utf-8 29706.3648ms
+2025-11-13 09:46:23.217 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7203/api/v1/Transaction/History?request=%7B%22PageIndex%22%3A0%2C%22PageSize%22%3A50%2C%22SortCol%22%3A%22Id%22%2C%22SortDirection%22%3A%22asc%22%2C%22TableFilter%22%3A%7B%22StatusId%22%3A%221%22%7D%7D - null null
+2025-11-13 09:46:23.224 +02:00 [INF] Executing endpoint 'TransactionCompliance.API.Controllers.TransactionController.GetTransactionHistory (TransactionCompliance.API)'
+2025-11-13 09:46:23.226 +02:00 [INF] Route matched with {action = "GetTransactionHistory", controller = "Transaction"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TransactionCompliance.Application.DTO.Common.DataTableResponse`1[TransactionCompliance.Application.DTO.Response.TransactionHistoryResponseModel]]] GetTransactionHistory(System.String) on controller TransactionCompliance.API.Controllers.TransactionController (TransactionCompliance.API).
+2025-11-13 09:46:23.270 +02:00 [ERR] Invalid JSON request format in GetTransactionHistory. Request: {"PageIndex":0,"PageSize":50,"SortCol":"Id","SortDirection":"asc","TableFilter":{"StatusId":"1"}}
+System.Text.Json.JsonException: The JSON value could not be converted to TransactionCompliance.Application.DTO.Request.TransactionHistoryFilter. Path: $.TableFilter.StatusId | LineNumber: 0 | BytePositionInLine: 95.
+ ---> System.InvalidOperationException: Cannot get the value of a token type 'String' as a number.
+   at System.Text.Json.ThrowHelper.ThrowInvalidOperationException_ExpectedNumber(JsonTokenType tokenType)
+   at System.Text.Json.Utf8JsonReader.TryGetInt32(Int32& value)
+   at System.Text.Json.Utf8JsonReader.GetInt32()
+   at System.Text.Json.Serialization.Converters.Int32Converter.Read(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value, Boolean& isPopulatedValue)
+   at System.Text.Json.Serialization.Converters.SmallObjectWithParameterizedConstructorConverter`5.TryRead[TArg](ReadStack& state, Utf8JsonReader& reader, JsonParameterInfo jsonParameterInfo, TArg& arg)
+   at System.Text.Json.Serialization.Converters.SmallObjectWithParameterizedConstructorConverter`5.ReadAndCacheConstructorArgument(ReadStack& state, Utf8JsonReader& reader, JsonParameterInfo jsonParameterInfo)
+   at System.Text.Json.Serialization.Converters.ObjectWithParameterizedConstructorConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value, Boolean& isPopulatedValue)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value, Boolean& isPopulatedValue)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, T& value, JsonSerializerOptions options, ReadStack& state)
+   --- End of inner exception stack trace ---
+   at System.Text.Json.ThrowHelper.ReThrowWithPath(ReadStack& state, Utf8JsonReader& reader, Exception ex)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, T& value, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.Deserialize(Utf8JsonReader& reader, ReadStack& state)
+   at System.Text.Json.JsonSerializer.ReadFromSpan[TValue](ReadOnlySpan`1 utf8Json, JsonTypeInfo`1 jsonTypeInfo, Nullable`1 actualByteCount)
+   at System.Text.Json.JsonSerializer.ReadFromSpan[TValue](ReadOnlySpan`1 json, JsonTypeInfo`1 jsonTypeInfo)
+   at System.Text.Json.JsonSerializer.Deserialize[TValue](String json, JsonSerializerOptions options)
+   at TransactionCompliance.Application.Services.TransactionRepository.GetTransactionHistory(String request) in C:\Users\User\source\repos\TransactionCompliance\TransactionCompliance.Application\Services\TransactionRepository.cs:line 85
+2025-11-13 09:46:23.331 +02:00 [INF] Executing BadRequestObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-11-13 09:46:23.335 +02:00 [INF] Executed action TransactionCompliance.API.Controllers.TransactionController.GetTransactionHistory (TransactionCompliance.API) in 106.9048ms
+2025-11-13 09:46:23.339 +02:00 [INF] Executed endpoint 'TransactionCompliance.API.Controllers.TransactionController.GetTransactionHistory (TransactionCompliance.API)'
+2025-11-13 09:46:23.341 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7203/api/v1/Transaction/History?request=%7B%22PageIndex%22%3A0%2C%22PageSize%22%3A50%2C%22SortCol%22%3A%22Id%22%2C%22SortDirection%22%3A%22asc%22%2C%22TableFilter%22%3A%7B%22StatusId%22%3A%221%22%7D%7D - 400 null application/json; charset=utf-8 124.4071ms
+2025-11-13 09:46:37.542 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7203/api/v1/Transaction/History?request=%7B%22PageIndex%22%3A0%2C%22PageSize%22%3A50%2C%22SortCol%22%3A%22Id%22%2C%22SortDirection%22%3A%22asc%22%2C%22TableFilter%22%3A%7B%22StatusId%22%3A1%7D%7D - null null
+2025-11-13 09:46:37.547 +02:00 [INF] Executing endpoint 'TransactionCompliance.API.Controllers.TransactionController.GetTransactionHistory (TransactionCompliance.API)'
+2025-11-13 09:46:37.549 +02:00 [INF] Route matched with {action = "GetTransactionHistory", controller = "Transaction"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TransactionCompliance.Application.DTO.Common.DataTableResponse`1[TransactionCompliance.Application.DTO.Response.TransactionHistoryResponseModel]]] GetTransactionHistory(System.String) on controller TransactionCompliance.API.Controllers.TransactionController (TransactionCompliance.API).
+2025-11-13 09:46:37.575 +02:00 [INF] Executed DbCommand (14ms) [Parameters=[@__userId_0='?' (DbType = Int32), @__filter_StatusId_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Transactions] AS [t]
+WHERE [t].[UserId] = @__userId_0 AND [t].[StatusId] = @__filter_StatusId_1
+2025-11-13 09:46:37.599 +02:00 [INF] Executed DbCommand (11ms) [Parameters=[@__userId_0='?' (DbType = Int32), @__filter_StatusId_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32), @__p_3='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t0].[Id], CAST(0 AS bit), [t1].[Id], [t1].[CreatedAt], [t1].[Description], [t1].[Name], [t1].[UpdatedAt], CAST(0 AS bit), [s].[Id], [s].[CreatedAt], [s].[Description], [s].[Name], [t0].[Amount], [t0].[AccountNumberMasked], [t0].[CardNumberMasked]
+FROM (
+    SELECT [t].[Id], [t].[AccountNumberMasked], [t].[Amount], [t].[CardNumberMasked], [t].[StatusId], [t].[TransactionTypeId]
+    FROM [Transactions] AS [t]
+    WHERE [t].[UserId] = @__userId_0 AND [t].[StatusId] = @__filter_StatusId_1
+    ORDER BY [t].[Id]
+    OFFSET @__p_2 ROWS FETCH NEXT @__p_3 ROWS ONLY
+) AS [t0]
+INNER JOIN [TransactionTypes] AS [t1] ON [t0].[TransactionTypeId] = [t1].[Id]
+INNER JOIN [Statuses] AS [s] ON [t0].[StatusId] = [s].[Id]
+ORDER BY [t0].[Id]
+2025-11-13 09:46:37.602 +02:00 [INF] Transaction history accessed by user {"UserId":1,"RequestTime":"2025-11-13T07:46:37.6025997Z","Filter":{"ToDate":"0001-01-01T00:00:00.0000000","FromDate":"0001-01-01T00:00:00.0000000","StatusId":1,"TransactionTypeId":0,"$type":"TransactionHistoryFilter"},"SortColumn":"Id","SortDirection":"asc","PageIndex":0,"PageSize":50,"RecordCount":1}
+2025-11-13 09:46:37.616 +02:00 [INF] Executing ObjectResult, writing value of type 'TransactionCompliance.Application.DTO.Common.DataTableResponse`1[[TransactionCompliance.Application.DTO.Response.TransactionHistoryResponseModel, TransactionCompliance.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-13 09:46:37.618 +02:00 [INF] Executed action TransactionCompliance.API.Controllers.TransactionController.GetTransactionHistory (TransactionCompliance.API) in 66.993ms
+2025-11-13 09:46:37.622 +02:00 [INF] Executed endpoint 'TransactionCompliance.API.Controllers.TransactionController.GetTransactionHistory (TransactionCompliance.API)'
+2025-11-13 09:46:37.628 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7203/api/v1/Transaction/History?request=%7B%22PageIndex%22%3A0%2C%22PageSize%22%3A50%2C%22SortCol%22%3A%22Id%22%2C%22SortDirection%22%3A%22asc%22%2C%22TableFilter%22%3A%7B%22StatusId%22%3A1%7D%7D - 200 null application/json; charset=utf-8 87.5427ms
+2025-11-13 09:46:48.471 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7203/api/v1/Transaction/History?request=%7B%22PageIndex%22%3A0%2C%22PageSize%22%3A50%2C%22SortCol%22%3A%22Id%22%2C%22SortDirection%22%3A%22asc%22%2C%22TableFilter%22%3A%7B%22StatusId%22%3A5%7D%7D - null null
+2025-11-13 09:46:48.477 +02:00 [INF] Executing endpoint 'TransactionCompliance.API.Controllers.TransactionController.GetTransactionHistory (TransactionCompliance.API)'
+2025-11-13 09:46:48.479 +02:00 [INF] Route matched with {action = "GetTransactionHistory", controller = "Transaction"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TransactionCompliance.Application.DTO.Common.DataTableResponse`1[TransactionCompliance.Application.DTO.Response.TransactionHistoryResponseModel]]] GetTransactionHistory(System.String) on controller TransactionCompliance.API.Controllers.TransactionController (TransactionCompliance.API).
+2025-11-13 09:46:48.496 +02:00 [INF] Executed DbCommand (12ms) [Parameters=[@__userId_0='?' (DbType = Int32), @__filter_StatusId_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Transactions] AS [t]
+WHERE [t].[UserId] = @__userId_0 AND [t].[StatusId] = @__filter_StatusId_1
+2025-11-13 09:46:48.512 +02:00 [INF] Executed DbCommand (10ms) [Parameters=[@__userId_0='?' (DbType = Int32), @__filter_StatusId_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32), @__p_3='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t0].[Id], CAST(0 AS bit), [t1].[Id], [t1].[CreatedAt], [t1].[Description], [t1].[Name], [t1].[UpdatedAt], CAST(0 AS bit), [s].[Id], [s].[CreatedAt], [s].[Description], [s].[Name], [t0].[Amount], [t0].[AccountNumberMasked], [t0].[CardNumberMasked]
+FROM (
+    SELECT [t].[Id], [t].[AccountNumberMasked], [t].[Amount], [t].[CardNumberMasked], [t].[StatusId], [t].[TransactionTypeId]
+    FROM [Transactions] AS [t]
+    WHERE [t].[UserId] = @__userId_0 AND [t].[StatusId] = @__filter_StatusId_1
+    ORDER BY [t].[Id]
+    OFFSET @__p_2 ROWS FETCH NEXT @__p_3 ROWS ONLY
+) AS [t0]
+INNER JOIN [TransactionTypes] AS [t1] ON [t0].[TransactionTypeId] = [t1].[Id]
+INNER JOIN [Statuses] AS [s] ON [t0].[StatusId] = [s].[Id]
+ORDER BY [t0].[Id]
+2025-11-13 09:46:48.516 +02:00 [INF] Transaction history accessed by user {"UserId":1,"RequestTime":"2025-11-13T07:46:48.5164693Z","Filter":{"ToDate":"0001-01-01T00:00:00.0000000","FromDate":"0001-01-01T00:00:00.0000000","StatusId":5,"TransactionTypeId":0,"$type":"TransactionHistoryFilter"},"SortColumn":"Id","SortDirection":"asc","PageIndex":0,"PageSize":50,"RecordCount":1}
+2025-11-13 09:46:48.529 +02:00 [INF] Executing ObjectResult, writing value of type 'TransactionCompliance.Application.DTO.Common.DataTableResponse`1[[TransactionCompliance.Application.DTO.Response.TransactionHistoryResponseModel, TransactionCompliance.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-13 09:46:48.532 +02:00 [INF] Executed action TransactionCompliance.API.Controllers.TransactionController.GetTransactionHistory (TransactionCompliance.API) in 49.3325ms
+2025-11-13 09:46:48.534 +02:00 [INF] Executed endpoint 'TransactionCompliance.API.Controllers.TransactionController.GetTransactionHistory (TransactionCompliance.API)'
+2025-11-13 09:46:48.536 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7203/api/v1/Transaction/History?request=%7B%22PageIndex%22%3A0%2C%22PageSize%22%3A50%2C%22SortCol%22%3A%22Id%22%2C%22SortDirection%22%3A%22asc%22%2C%22TableFilter%22%3A%7B%22StatusId%22%3A5%7D%7D - 200 null application/json; charset=utf-8 65.86ms
+2025-11-13 09:47:25.500 +02:00 [WRN] No store type was specified for the decimal property 'Amount' on entity type 'Transaction'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-11-13 09:47:26.253 +02:00 [INF] Executed DbCommand (35ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [UserAccounts] AS [u]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-11-13 09:47:26.290 +02:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Statuses] AS [s]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-11-13 09:47:26.306 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [TransactionTypes] AS [t]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-11-13 09:47:26.322 +02:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Transactions] AS [t]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-11-13 09:47:26.426 +02:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-11-13 09:47:26.684 +02:00 [INF] Now listening on: https://localhost:7203
+2025-11-13 09:47:26.685 +02:00 [INF] Now listening on: http://localhost:5037
+2025-11-13 09:47:26.785 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-13 09:47:26.787 +02:00 [INF] Hosting environment: Development
+2025-11-13 09:47:26.788 +02:00 [INF] Content root path: C:\Users\User\source\repos\TransactionCompliance\TransactionCompliance.API
+2025-11-13 09:47:27.145 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7203/swagger/index.html - null null
+2025-11-13 09:47:27.446 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7203/swagger/index.html - 200 null text/html;charset=utf-8 310.5776ms
+2025-11-13 09:47:27.452 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7203/_framework/aspnetcore-browser-refresh.js - null null
+2025-11-13 09:47:27.467 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7203/_framework/aspnetcore-browser-refresh.js - 200 16535 application/javascript; charset=utf-8 16.2712ms
+2025-11-13 09:47:27.469 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7203/_vs/browserLink - null null
+2025-11-13 09:47:27.536 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7203/_vs/browserLink - 200 null text/javascript; charset=UTF-8 67.2921ms
+2025-11-13 09:47:27.578 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7203/swagger/v1/swagger.json - null null
+2025-11-13 09:47:27.593 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7203/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 15.1865ms
+2025-11-13 09:47:46.761 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7203/api/v1/Transaction/History?request=%7B%22PageIndex%22%3A0%2C%22PageSize%22%3A50%2C%22SortCol%22%3A%22Id%22%2C%22SortDirection%22%3A%22asc%22%2C%22TableFilter%22%3A%7B%22TransactionTypeId%22%3A%221%22%7D%7D - null null
+2025-11-13 09:47:46.858 +02:00 [INF] Executing endpoint 'TransactionCompliance.API.Controllers.TransactionController.GetTransactionHistory (TransactionCompliance.API)'
+2025-11-13 09:47:46.892 +02:00 [INF] Route matched with {action = "GetTransactionHistory", controller = "Transaction"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TransactionCompliance.Application.DTO.Common.DataTableResponse`1[TransactionCompliance.Application.DTO.Response.TransactionHistoryResponseModel]]] GetTransactionHistory(System.String) on controller TransactionCompliance.API.Controllers.TransactionController (TransactionCompliance.API).
+2025-11-13 09:47:47.468 +02:00 [ERR] Invalid JSON request format in GetTransactionHistory. Request: {"PageIndex":0,"PageSize":50,"SortCol":"Id","SortDirection":"asc","TableFilter":{"TransactionTypeId":"1"}}
+System.Text.Json.JsonException: The JSON value could not be converted to TransactionCompliance.Application.DTO.Request.TransactionHistoryFilter. Path: $.TableFilter.TransactionTypeId | LineNumber: 0 | BytePositionInLine: 104.
+ ---> System.InvalidOperationException: Cannot get the value of a token type 'String' as a number.
+   at System.Text.Json.ThrowHelper.ThrowInvalidOperationException_ExpectedNumber(JsonTokenType tokenType)
+   at System.Text.Json.Utf8JsonReader.TryGetInt32(Int32& value)
+   at System.Text.Json.Utf8JsonReader.GetInt32()
+   at System.Text.Json.Serialization.Converters.Int32Converter.Read(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value, Boolean& isPopulatedValue)
+   at System.Text.Json.Serialization.Converters.SmallObjectWithParameterizedConstructorConverter`5.TryRead[TArg](ReadStack& state, Utf8JsonReader& reader, JsonParameterInfo jsonParameterInfo, TArg& arg)
+   at System.Text.Json.Serialization.Converters.SmallObjectWithParameterizedConstructorConverter`5.ReadAndCacheConstructorArgument(ReadStack& state, Utf8JsonReader& reader, JsonParameterInfo jsonParameterInfo)
+   at System.Text.Json.Serialization.Converters.ObjectWithParameterizedConstructorConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value, Boolean& isPopulatedValue)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value, Boolean& isPopulatedValue)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, T& value, JsonSerializerOptions options, ReadStack& state)
+   --- End of inner exception stack trace ---
+   at System.Text.Json.ThrowHelper.ReThrowWithPath(ReadStack& state, Utf8JsonReader& reader, Exception ex)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, T& value, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.Deserialize(Utf8JsonReader& reader, ReadStack& state)
+   at System.Text.Json.JsonSerializer.ReadFromSpan[TValue](ReadOnlySpan`1 utf8Json, JsonTypeInfo`1 jsonTypeInfo, Nullable`1 actualByteCount)
+   at System.Text.Json.JsonSerializer.ReadFromSpan[TValue](ReadOnlySpan`1 json, JsonTypeInfo`1 jsonTypeInfo)
+   at System.Text.Json.JsonSerializer.Deserialize[TValue](String json, JsonSerializerOptions options)
+   at TransactionCompliance.Application.Services.TransactionRepository.GetTransactionHistory(String request) in C:\Users\User\source\repos\TransactionCompliance\TransactionCompliance.Application\Services\TransactionRepository.cs:line 85
+2025-11-13 09:47:47.516 +02:00 [INF] Executing BadRequestObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-11-13 09:47:47.528 +02:00 [INF] Executed action TransactionCompliance.API.Controllers.TransactionController.GetTransactionHistory (TransactionCompliance.API) in 628.0019ms
+2025-11-13 09:47:47.530 +02:00 [INF] Executed endpoint 'TransactionCompliance.API.Controllers.TransactionController.GetTransactionHistory (TransactionCompliance.API)'
+2025-11-13 09:47:47.532 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7203/api/v1/Transaction/History?request=%7B%22PageIndex%22%3A0%2C%22PageSize%22%3A50%2C%22SortCol%22%3A%22Id%22%2C%22SortDirection%22%3A%22asc%22%2C%22TableFilter%22%3A%7B%22TransactionTypeId%22%3A%221%22%7D%7D - 400 null application/json; charset=utf-8 771.4259ms
+2025-11-13 09:47:54.919 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7203/api/v1/Transaction/History?request=%7B%22PageIndex%22%3A0%2C%22PageSize%22%3A50%2C%22SortCol%22%3A%22Id%22%2C%22SortDirection%22%3A%22asc%22%2C%22TableFilter%22%3A%7B%22TransactionTypeId%22%3A1%7D%7D - null null
+2025-11-13 09:47:54.929 +02:00 [INF] Executing endpoint 'TransactionCompliance.API.Controllers.TransactionController.GetTransactionHistory (TransactionCompliance.API)'
+2025-11-13 09:47:54.930 +02:00 [INF] Route matched with {action = "GetTransactionHistory", controller = "Transaction"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TransactionCompliance.Application.DTO.Common.DataTableResponse`1[TransactionCompliance.Application.DTO.Response.TransactionHistoryResponseModel]]] GetTransactionHistory(System.String) on controller TransactionCompliance.API.Controllers.TransactionController (TransactionCompliance.API).
+2025-11-13 09:47:55.153 +02:00 [INF] Executed DbCommand (51ms) [Parameters=[@__userId_0='?' (DbType = Int32), @__filter_TransactionTypeId_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Transactions] AS [t]
+WHERE [t].[UserId] = @__userId_0 AND [t].[TransactionTypeId] = @__filter_TransactionTypeId_1
+2025-11-13 09:47:55.794 +02:00 [INF] Executed DbCommand (10ms) [Parameters=[@__userId_0='?' (DbType = Int32), @__filter_TransactionTypeId_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32), @__p_3='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t0].[Id], CAST(0 AS bit), [t1].[Id], [t1].[CreatedAt], [t1].[Description], [t1].[Name], [t1].[UpdatedAt], CAST(0 AS bit), [s].[Id], [s].[CreatedAt], [s].[Description], [s].[Name], [t0].[Amount], [t0].[AccountNumberMasked], [t0].[CardNumberMasked]
+FROM (
+    SELECT [t].[Id], [t].[AccountNumberMasked], [t].[Amount], [t].[CardNumberMasked], [t].[StatusId], [t].[TransactionTypeId]
+    FROM [Transactions] AS [t]
+    WHERE [t].[UserId] = @__userId_0 AND [t].[TransactionTypeId] = @__filter_TransactionTypeId_1
+    ORDER BY [t].[Id]
+    OFFSET @__p_2 ROWS FETCH NEXT @__p_3 ROWS ONLY
+) AS [t0]
+INNER JOIN [TransactionTypes] AS [t1] ON [t0].[TransactionTypeId] = [t1].[Id]
+INNER JOIN [Statuses] AS [s] ON [t0].[StatusId] = [s].[Id]
+ORDER BY [t0].[Id]
+2025-11-13 09:47:55.805 +02:00 [INF] Transaction history accessed by user {"UserId":1,"RequestTime":"2025-11-13T07:47:55.8018411Z","Filter":{"ToDate":"0001-01-01T00:00:00.0000000","FromDate":"0001-01-01T00:00:00.0000000","StatusId":0,"TransactionTypeId":1,"$type":"TransactionHistoryFilter"},"SortColumn":"Id","SortDirection":"asc","PageIndex":0,"PageSize":50,"RecordCount":1}
+2025-11-13 09:47:55.824 +02:00 [INF] Executing ObjectResult, writing value of type 'TransactionCompliance.Application.DTO.Common.DataTableResponse`1[[TransactionCompliance.Application.DTO.Response.TransactionHistoryResponseModel, TransactionCompliance.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-13 09:47:55.834 +02:00 [INF] Executed action TransactionCompliance.API.Controllers.TransactionController.GetTransactionHistory (TransactionCompliance.API) in 901.3061ms
+2025-11-13 09:47:55.837 +02:00 [INF] Executed endpoint 'TransactionCompliance.API.Controllers.TransactionController.GetTransactionHistory (TransactionCompliance.API)'
+2025-11-13 09:47:55.843 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7203/api/v1/Transaction/History?request=%7B%22PageIndex%22%3A0%2C%22PageSize%22%3A50%2C%22SortCol%22%3A%22Id%22%2C%22SortDirection%22%3A%22asc%22%2C%22TableFilter%22%3A%7B%22TransactionTypeId%22%3A1%7D%7D - 200 null application/json; charset=utf-8 924.1154ms
+2025-11-13 09:48:03.998 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7203/api/v1/Transaction/History?request=%7B%22PageIndex%22%3A0%2C%22PageSize%22%3A50%2C%22SortCol%22%3A%22Id%22%2C%22SortDirection%22%3A%22asc%22%2C%22TableFilter%22%3A%7B%22TransactionTypeId%22%3A2%7D%7D - null null
+2025-11-13 09:48:04.011 +02:00 [INF] Executing endpoint 'TransactionCompliance.API.Controllers.TransactionController.GetTransactionHistory (TransactionCompliance.API)'
+2025-11-13 09:48:04.013 +02:00 [INF] Route matched with {action = "GetTransactionHistory", controller = "Transaction"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TransactionCompliance.Application.DTO.Common.DataTableResponse`1[TransactionCompliance.Application.DTO.Response.TransactionHistoryResponseModel]]] GetTransactionHistory(System.String) on controller TransactionCompliance.API.Controllers.TransactionController (TransactionCompliance.API).
+2025-11-13 09:48:04.037 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[@__userId_0='?' (DbType = Int32), @__filter_TransactionTypeId_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Transactions] AS [t]
+WHERE [t].[UserId] = @__userId_0 AND [t].[TransactionTypeId] = @__filter_TransactionTypeId_1
+2025-11-13 09:48:04.045 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (DbType = Int32), @__filter_TransactionTypeId_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32), @__p_3='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t0].[Id], CAST(0 AS bit), [t1].[Id], [t1].[CreatedAt], [t1].[Description], [t1].[Name], [t1].[UpdatedAt], CAST(0 AS bit), [s].[Id], [s].[CreatedAt], [s].[Description], [s].[Name], [t0].[Amount], [t0].[AccountNumberMasked], [t0].[CardNumberMasked]
+FROM (
+    SELECT [t].[Id], [t].[AccountNumberMasked], [t].[Amount], [t].[CardNumberMasked], [t].[StatusId], [t].[TransactionTypeId]
+    FROM [Transactions] AS [t]
+    WHERE [t].[UserId] = @__userId_0 AND [t].[TransactionTypeId] = @__filter_TransactionTypeId_1
+    ORDER BY [t].[Id]
+    OFFSET @__p_2 ROWS FETCH NEXT @__p_3 ROWS ONLY
+) AS [t0]
+INNER JOIN [TransactionTypes] AS [t1] ON [t0].[TransactionTypeId] = [t1].[Id]
+INNER JOIN [Statuses] AS [s] ON [t0].[StatusId] = [s].[Id]
+ORDER BY [t0].[Id]
+2025-11-13 09:48:04.049 +02:00 [INF] Transaction history accessed by user {"UserId":1,"RequestTime":"2025-11-13T07:48:04.0485742Z","Filter":{"ToDate":"0001-01-01T00:00:00.0000000","FromDate":"0001-01-01T00:00:00.0000000","StatusId":0,"TransactionTypeId":2,"$type":"TransactionHistoryFilter"},"SortColumn":"Id","SortDirection":"asc","PageIndex":0,"PageSize":50,"RecordCount":1}
+2025-11-13 09:48:04.059 +02:00 [INF] Executing ObjectResult, writing value of type 'TransactionCompliance.Application.DTO.Common.DataTableResponse`1[[TransactionCompliance.Application.DTO.Response.TransactionHistoryResponseModel, TransactionCompliance.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-13 09:48:04.061 +02:00 [INF] Executed action TransactionCompliance.API.Controllers.TransactionController.GetTransactionHistory (TransactionCompliance.API) in 45.0655ms
+2025-11-13 09:48:04.063 +02:00 [INF] Executed endpoint 'TransactionCompliance.API.Controllers.TransactionController.GetTransactionHistory (TransactionCompliance.API)'
+2025-11-13 09:48:04.064 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7203/api/v1/Transaction/History?request=%7B%22PageIndex%22%3A0%2C%22PageSize%22%3A50%2C%22SortCol%22%3A%22Id%22%2C%22SortDirection%22%3A%22asc%22%2C%22TableFilter%22%3A%7B%22TransactionTypeId%22%3A2%7D%7D - 200 null application/json; charset=utf-8 67.017ms
+2025-11-13 09:48:10.646 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7203/api/v1/Transaction/History?request=%7B%22PageIndex%22%3A0%2C%22PageSize%22%3A50%2C%22SortCol%22%3A%22Id%22%2C%22SortDirection%22%3A%22asc%22%2C%22TableFilter%22%3A%7B%22TransactionTypeId%22%3A3%7D%7D - null null
+2025-11-13 09:48:10.651 +02:00 [INF] Executing endpoint 'TransactionCompliance.API.Controllers.TransactionController.GetTransactionHistory (TransactionCompliance.API)'
+2025-11-13 09:48:10.652 +02:00 [INF] Route matched with {action = "GetTransactionHistory", controller = "Transaction"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TransactionCompliance.Application.DTO.Common.DataTableResponse`1[TransactionCompliance.Application.DTO.Response.TransactionHistoryResponseModel]]] GetTransactionHistory(System.String) on controller TransactionCompliance.API.Controllers.TransactionController (TransactionCompliance.API).
+2025-11-13 09:48:10.664 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (DbType = Int32), @__filter_TransactionTypeId_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Transactions] AS [t]
+WHERE [t].[UserId] = @__userId_0 AND [t].[TransactionTypeId] = @__filter_TransactionTypeId_1
+2025-11-13 09:48:10.672 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[@__userId_0='?' (DbType = Int32), @__filter_TransactionTypeId_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32), @__p_3='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t0].[Id], CAST(0 AS bit), [t1].[Id], [t1].[CreatedAt], [t1].[Description], [t1].[Name], [t1].[UpdatedAt], CAST(0 AS bit), [s].[Id], [s].[CreatedAt], [s].[Description], [s].[Name], [t0].[Amount], [t0].[AccountNumberMasked], [t0].[CardNumberMasked]
+FROM (
+    SELECT [t].[Id], [t].[AccountNumberMasked], [t].[Amount], [t].[CardNumberMasked], [t].[StatusId], [t].[TransactionTypeId]
+    FROM [Transactions] AS [t]
+    WHERE [t].[UserId] = @__userId_0 AND [t].[TransactionTypeId] = @__filter_TransactionTypeId_1
+    ORDER BY [t].[Id]
+    OFFSET @__p_2 ROWS FETCH NEXT @__p_3 ROWS ONLY
+) AS [t0]
+INNER JOIN [TransactionTypes] AS [t1] ON [t0].[TransactionTypeId] = [t1].[Id]
+INNER JOIN [Statuses] AS [s] ON [t0].[StatusId] = [s].[Id]
+ORDER BY [t0].[Id]
+2025-11-13 09:48:10.676 +02:00 [INF] Transaction history accessed by user {"UserId":1,"RequestTime":"2025-11-13T07:48:10.6760775Z","Filter":{"ToDate":"0001-01-01T00:00:00.0000000","FromDate":"0001-01-01T00:00:00.0000000","StatusId":0,"TransactionTypeId":3,"$type":"TransactionHistoryFilter"},"SortColumn":"Id","SortDirection":"asc","PageIndex":0,"PageSize":50,"RecordCount":0}
+2025-11-13 09:48:10.690 +02:00 [INF] Executing ObjectResult, writing value of type 'TransactionCompliance.Application.DTO.Common.DataTableResponse`1[[TransactionCompliance.Application.DTO.Response.TransactionHistoryResponseModel, TransactionCompliance.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-13 09:48:10.693 +02:00 [INF] Executed action TransactionCompliance.API.Controllers.TransactionController.GetTransactionHistory (TransactionCompliance.API) in 32.4661ms
+2025-11-13 09:48:10.695 +02:00 [INF] Executed endpoint 'TransactionCompliance.API.Controllers.TransactionController.GetTransactionHistory (TransactionCompliance.API)'
+2025-11-13 09:48:10.697 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7203/api/v1/Transaction/History?request=%7B%22PageIndex%22%3A0%2C%22PageSize%22%3A50%2C%22SortCol%22%3A%22Id%22%2C%22SortDirection%22%3A%22asc%22%2C%22TableFilter%22%3A%7B%22TransactionTypeId%22%3A3%7D%7D - 200 null application/json; charset=utf-8 52.0029ms
+2025-11-13 09:49:01.861 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7203/api/v1/Transaction/History?request=%7B%22PageIndex%22%3A0%2C%22PageSize%22%3A50%2C%22SortCol%22%3A%22Id%22%2C%22SortDirection%22%3A%22asc%22%2C%22TableFilter%22%3A%7B%22FromDate%22%3A%222023-12-01%22%2C%22ToDate%22%3A%222025-12-01%22%7D%7D - null null
+2025-11-13 09:49:01.870 +02:00 [INF] Executing endpoint 'TransactionCompliance.API.Controllers.TransactionController.GetTransactionHistory (TransactionCompliance.API)'
+2025-11-13 09:49:01.872 +02:00 [INF] Route matched with {action = "GetTransactionHistory", controller = "Transaction"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TransactionCompliance.Application.DTO.Common.DataTableResponse`1[TransactionCompliance.Application.DTO.Response.TransactionHistoryResponseModel]]] GetTransactionHistory(System.String) on controller TransactionCompliance.API.Controllers.TransactionController (TransactionCompliance.API).
+2025-11-13 09:49:01.900 +02:00 [INF] Executed DbCommand (12ms) [Parameters=[@__userId_0='?' (DbType = Int32), @__filter_FromDate_1='?' (DbType = DateTime2), @__filter_ToDate_2='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Transactions] AS [t]
+WHERE [t].[UserId] = @__userId_0 AND [t].[CreatedAt] >= @__filter_FromDate_1 AND [t].[CreatedAt] <= @__filter_ToDate_2
+2025-11-13 09:49:01.925 +02:00 [INF] Executed DbCommand (11ms) [Parameters=[@__userId_0='?' (DbType = Int32), @__filter_FromDate_1='?' (DbType = DateTime2), @__filter_ToDate_2='?' (DbType = DateTime2), @__p_3='?' (DbType = Int32), @__p_4='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t0].[Id], CAST(0 AS bit), [t1].[Id], [t1].[CreatedAt], [t1].[Description], [t1].[Name], [t1].[UpdatedAt], CAST(0 AS bit), [s].[Id], [s].[CreatedAt], [s].[Description], [s].[Name], [t0].[Amount], [t0].[AccountNumberMasked], [t0].[CardNumberMasked]
+FROM (
+    SELECT [t].[Id], [t].[AccountNumberMasked], [t].[Amount], [t].[CardNumberMasked], [t].[StatusId], [t].[TransactionTypeId]
+    FROM [Transactions] AS [t]
+    WHERE [t].[UserId] = @__userId_0 AND [t].[CreatedAt] >= @__filter_FromDate_1 AND [t].[CreatedAt] <= @__filter_ToDate_2
+    ORDER BY [t].[Id]
+    OFFSET @__p_3 ROWS FETCH NEXT @__p_4 ROWS ONLY
+) AS [t0]
+INNER JOIN [TransactionTypes] AS [t1] ON [t0].[TransactionTypeId] = [t1].[Id]
+INNER JOIN [Statuses] AS [s] ON [t0].[StatusId] = [s].[Id]
+ORDER BY [t0].[Id]
+2025-11-13 09:49:01.929 +02:00 [INF] Transaction history accessed by user {"UserId":1,"RequestTime":"2025-11-13T07:49:01.9291990Z","Filter":{"ToDate":"2025-12-01T00:00:00.0000000","FromDate":"2023-12-01T00:00:00.0000000","StatusId":0,"TransactionTypeId":0,"$type":"TransactionHistoryFilter"},"SortColumn":"Id","SortDirection":"asc","PageIndex":0,"PageSize":50,"RecordCount":1}
+2025-11-13 09:49:01.941 +02:00 [INF] Executing ObjectResult, writing value of type 'TransactionCompliance.Application.DTO.Common.DataTableResponse`1[[TransactionCompliance.Application.DTO.Response.TransactionHistoryResponseModel, TransactionCompliance.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-13 09:49:01.943 +02:00 [INF] Executed action TransactionCompliance.API.Controllers.TransactionController.GetTransactionHistory (TransactionCompliance.API) in 67.8511ms
+2025-11-13 09:49:01.946 +02:00 [INF] Executed endpoint 'TransactionCompliance.API.Controllers.TransactionController.GetTransactionHistory (TransactionCompliance.API)'
+2025-11-13 09:49:01.948 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7203/api/v1/Transaction/History?request=%7B%22PageIndex%22%3A0%2C%22PageSize%22%3A50%2C%22SortCol%22%3A%22Id%22%2C%22SortDirection%22%3A%22asc%22%2C%22TableFilter%22%3A%7B%22FromDate%22%3A%222023-12-01%22%2C%22ToDate%22%3A%222025-12-01%22%7D%7D - 200 null application/json; charset=utf-8 88.2136ms
+2025-11-13 09:49:09.429 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7203/api/v1/Transaction/History?request=%7B%22PageIndex%22%3A0%2C%22PageSize%22%3A50%2C%22SortCol%22%3A%22Id%22%2C%22SortDirection%22%3A%22asc%22%2C%22TableFilter%22%3A%7B%22FromDate%22%3A%222023-12-01%22%2C%22ToDate%22%3A%222027-12-01%22%7D%7D - null null
+2025-11-13 09:49:09.436 +02:00 [INF] Executing endpoint 'TransactionCompliance.API.Controllers.TransactionController.GetTransactionHistory (TransactionCompliance.API)'
+2025-11-13 09:49:09.443 +02:00 [INF] Route matched with {action = "GetTransactionHistory", controller = "Transaction"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TransactionCompliance.Application.DTO.Common.DataTableResponse`1[TransactionCompliance.Application.DTO.Response.TransactionHistoryResponseModel]]] GetTransactionHistory(System.String) on controller TransactionCompliance.API.Controllers.TransactionController (TransactionCompliance.API).
+2025-11-13 09:49:09.453 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (DbType = Int32), @__filter_FromDate_1='?' (DbType = DateTime2), @__filter_ToDate_2='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Transactions] AS [t]
+WHERE [t].[UserId] = @__userId_0 AND [t].[CreatedAt] >= @__filter_FromDate_1 AND [t].[CreatedAt] <= @__filter_ToDate_2
+2025-11-13 09:49:09.461 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[@__userId_0='?' (DbType = Int32), @__filter_FromDate_1='?' (DbType = DateTime2), @__filter_ToDate_2='?' (DbType = DateTime2), @__p_3='?' (DbType = Int32), @__p_4='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t0].[Id], CAST(0 AS bit), [t1].[Id], [t1].[CreatedAt], [t1].[Description], [t1].[Name], [t1].[UpdatedAt], CAST(0 AS bit), [s].[Id], [s].[CreatedAt], [s].[Description], [s].[Name], [t0].[Amount], [t0].[AccountNumberMasked], [t0].[CardNumberMasked]
+FROM (
+    SELECT [t].[Id], [t].[AccountNumberMasked], [t].[Amount], [t].[CardNumberMasked], [t].[StatusId], [t].[TransactionTypeId]
+    FROM [Transactions] AS [t]
+    WHERE [t].[UserId] = @__userId_0 AND [t].[CreatedAt] >= @__filter_FromDate_1 AND [t].[CreatedAt] <= @__filter_ToDate_2
+    ORDER BY [t].[Id]
+    OFFSET @__p_3 ROWS FETCH NEXT @__p_4 ROWS ONLY
+) AS [t0]
+INNER JOIN [TransactionTypes] AS [t1] ON [t0].[TransactionTypeId] = [t1].[Id]
+INNER JOIN [Statuses] AS [s] ON [t0].[StatusId] = [s].[Id]
+ORDER BY [t0].[Id]
+2025-11-13 09:49:09.465 +02:00 [INF] Transaction history accessed by user {"UserId":1,"RequestTime":"2025-11-13T07:49:09.4651885Z","Filter":{"ToDate":"2027-12-01T00:00:00.0000000","FromDate":"2023-12-01T00:00:00.0000000","StatusId":0,"TransactionTypeId":0,"$type":"TransactionHistoryFilter"},"SortColumn":"Id","SortDirection":"asc","PageIndex":0,"PageSize":50,"RecordCount":2}
+2025-11-13 09:49:09.476 +02:00 [INF] Executing ObjectResult, writing value of type 'TransactionCompliance.Application.DTO.Common.DataTableResponse`1[[TransactionCompliance.Application.DTO.Response.TransactionHistoryResponseModel, TransactionCompliance.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-13 09:49:09.482 +02:00 [INF] Executed action TransactionCompliance.API.Controllers.TransactionController.GetTransactionHistory (TransactionCompliance.API) in 32.9023ms
+2025-11-13 09:49:09.484 +02:00 [INF] Executed endpoint 'TransactionCompliance.API.Controllers.TransactionController.GetTransactionHistory (TransactionCompliance.API)'
+2025-11-13 09:49:09.485 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7203/api/v1/Transaction/History?request=%7B%22PageIndex%22%3A0%2C%22PageSize%22%3A50%2C%22SortCol%22%3A%22Id%22%2C%22SortDirection%22%3A%22asc%22%2C%22TableFilter%22%3A%7B%22FromDate%22%3A%222023-12-01%22%2C%22ToDate%22%3A%222027-12-01%22%7D%7D - 200 null application/json; charset=utf-8 56.4933ms
+2025-11-13 09:50:00.854 +02:00 [WRN] No store type was specified for the decimal property 'Amount' on entity type 'Transaction'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-11-13 09:50:05.420 +02:00 [INF] Executed DbCommand (3,926ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [UserAccounts] AS [u]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-11-13 09:50:05.466 +02:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Statuses] AS [s]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-11-13 09:50:05.484 +02:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [TransactionTypes] AS [t]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-11-13 09:50:05.496 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Transactions] AS [t]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-11-13 09:50:05.587 +02:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-11-13 09:50:06.043 +02:00 [INF] Now listening on: https://localhost:7203
+2025-11-13 09:50:06.045 +02:00 [INF] Now listening on: http://localhost:5037
+2025-11-13 09:50:06.149 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-13 09:50:06.152 +02:00 [INF] Hosting environment: Development
+2025-11-13 09:50:06.153 +02:00 [INF] Content root path: C:\Users\User\source\repos\TransactionCompliance\TransactionCompliance.API
+2025-11-13 09:50:06.605 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7203/swagger/index.html - null null
+2025-11-13 09:50:06.901 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7203/swagger/index.html - 200 null text/html;charset=utf-8 304.9133ms
+2025-11-13 09:50:06.903 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7203/_framework/aspnetcore-browser-refresh.js - null null
+2025-11-13 09:50:06.916 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7203/_framework/aspnetcore-browser-refresh.js - 200 16535 application/javascript; charset=utf-8 12.7463ms
+2025-11-13 09:50:06.922 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7203/_vs/browserLink - null null
+2025-11-13 09:50:06.982 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7203/_vs/browserLink - 200 null text/javascript; charset=UTF-8 60.5896ms
+2025-11-13 09:50:07.013 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7203/swagger/v1/swagger.json - null null
+2025-11-13 09:50:07.027 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7203/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 15.1528ms
+2025-11-13 09:50:32.837 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7203/api/v1/Transaction/History?request=%7B%22PageIndex%22%3A0%2C%22PageSize%22%3A50%2C%22SortCol%22%3A%22Id%22%2C%22SortDirection%22%3A%22asc%22%2C%22TableFilter%22%3A%7B%22FromDate%22%3A%222023-12-01%22%2C%22ToDate%22%3A%222025-12-01%22%7D%7D - null null
+2025-11-13 09:50:32.932 +02:00 [INF] Executing endpoint 'TransactionCompliance.API.Controllers.TransactionController.GetTransactionHistory (TransactionCompliance.API)'
+2025-11-13 09:50:32.959 +02:00 [INF] Route matched with {action = "GetTransactionHistory", controller = "Transaction"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TransactionCompliance.Application.DTO.Common.DataTableResponse`1[TransactionCompliance.Application.DTO.Response.TransactionHistoryResponseModel]]] GetTransactionHistory(System.String) on controller TransactionCompliance.API.Controllers.TransactionController (TransactionCompliance.API).
+2025-11-13 09:50:33.231 +02:00 [INF] Executed DbCommand (47ms) [Parameters=[@__userId_0='?' (DbType = Int32), @__filter_FromDate_1='?' (DbType = DateTime2), @__filter_ToDate_2='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Transactions] AS [t]
+WHERE [t].[UserId] = @__userId_0 AND [t].[CreatedAt] >= @__filter_FromDate_1 AND [t].[CreatedAt] <= @__filter_ToDate_2
+2025-11-13 09:50:33.678 +02:00 [INF] Executed DbCommand (19ms) [Parameters=[@__userId_0='?' (DbType = Int32), @__filter_FromDate_1='?' (DbType = DateTime2), @__filter_ToDate_2='?' (DbType = DateTime2), @__p_3='?' (DbType = Int32), @__p_4='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t0].[Id], CAST(0 AS bit), [t1].[Id], [t1].[CreatedAt], [t1].[Description], [t1].[Name], [t1].[UpdatedAt], CAST(0 AS bit), [s].[Id], [s].[CreatedAt], [s].[Description], [s].[Name], [t0].[Amount], [t0].[AccountNumberMasked], [t0].[CardNumberMasked]
+FROM (
+    SELECT [t].[Id], [t].[AccountNumberMasked], [t].[Amount], [t].[CardNumberMasked], [t].[StatusId], [t].[TransactionTypeId]
+    FROM [Transactions] AS [t]
+    WHERE [t].[UserId] = @__userId_0 AND [t].[CreatedAt] >= @__filter_FromDate_1 AND [t].[CreatedAt] <= @__filter_ToDate_2
+    ORDER BY [t].[Id]
+    OFFSET @__p_3 ROWS FETCH NEXT @__p_4 ROWS ONLY
+) AS [t0]
+INNER JOIN [TransactionTypes] AS [t1] ON [t0].[TransactionTypeId] = [t1].[Id]
+INNER JOIN [Statuses] AS [s] ON [t0].[StatusId] = [s].[Id]
+ORDER BY [t0].[Id]
+2025-11-13 09:50:33.691 +02:00 [INF] Transaction history accessed by user {"UserId":1,"RequestTime":"2025-11-13T07:50:33.6896134Z","Filter":{"ToDate":"2025-12-01T00:00:00.0000000","FromDate":"2023-12-01T00:00:00.0000000","StatusId":0,"TransactionTypeId":0,"$type":"TransactionHistoryFilter"},"SortColumn":"Id","SortDirection":"asc","PageIndex":0,"PageSize":50,"RecordCount":1}
+2025-11-13 09:50:33.715 +02:00 [INF] Executing ObjectResult, writing value of type 'TransactionCompliance.Application.DTO.Common.DataTableResponse`1[[TransactionCompliance.Application.DTO.Response.TransactionHistoryResponseModel, TransactionCompliance.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-13 09:50:33.740 +02:00 [INF] Executed action TransactionCompliance.API.Controllers.TransactionController.GetTransactionHistory (TransactionCompliance.API) in 774.1888ms
+2025-11-13 09:50:33.743 +02:00 [INF] Executed endpoint 'TransactionCompliance.API.Controllers.TransactionController.GetTransactionHistory (TransactionCompliance.API)'
+2025-11-13 09:50:33.750 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7203/api/v1/Transaction/History?request=%7B%22PageIndex%22%3A0%2C%22PageSize%22%3A50%2C%22SortCol%22%3A%22Id%22%2C%22SortDirection%22%3A%22asc%22%2C%22TableFilter%22%3A%7B%22FromDate%22%3A%222023-12-01%22%2C%22ToDate%22%3A%222025-12-01%22%7D%7D - 200 null application/json; charset=utf-8 912.8097ms
+2025-11-13 09:50:40.312 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7203/api/v1/Transaction/History?request=%7B%22PageIndex%22%3A0%2C%22PageSize%22%3A50%2C%22SortCol%22%3A%22Id%22%2C%22SortDirection%22%3A%22asc%22%2C%22TableFilter%22%3A%7B%22FromDate%22%3A%222023-12-01%22%2C%22ToDate%22%3A%222027-12-01%22%7D%7D - null null
+2025-11-13 09:50:40.329 +02:00 [INF] Executing endpoint 'TransactionCompliance.API.Controllers.TransactionController.GetTransactionHistory (TransactionCompliance.API)'
+2025-11-13 09:50:40.337 +02:00 [INF] Route matched with {action = "GetTransactionHistory", controller = "Transaction"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TransactionCompliance.Application.DTO.Common.DataTableResponse`1[TransactionCompliance.Application.DTO.Response.TransactionHistoryResponseModel]]] GetTransactionHistory(System.String) on controller TransactionCompliance.API.Controllers.TransactionController (TransactionCompliance.API).
+2025-11-13 09:50:40.357 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[@__userId_0='?' (DbType = Int32), @__filter_FromDate_1='?' (DbType = DateTime2), @__filter_ToDate_2='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Transactions] AS [t]
+WHERE [t].[UserId] = @__userId_0 AND [t].[CreatedAt] >= @__filter_FromDate_1 AND [t].[CreatedAt] <= @__filter_ToDate_2
+2025-11-13 09:50:40.365 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (DbType = Int32), @__filter_FromDate_1='?' (DbType = DateTime2), @__filter_ToDate_2='?' (DbType = DateTime2), @__p_3='?' (DbType = Int32), @__p_4='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t0].[Id], CAST(0 AS bit), [t1].[Id], [t1].[CreatedAt], [t1].[Description], [t1].[Name], [t1].[UpdatedAt], CAST(0 AS bit), [s].[Id], [s].[CreatedAt], [s].[Description], [s].[Name], [t0].[Amount], [t0].[AccountNumberMasked], [t0].[CardNumberMasked]
+FROM (
+    SELECT [t].[Id], [t].[AccountNumberMasked], [t].[Amount], [t].[CardNumberMasked], [t].[StatusId], [t].[TransactionTypeId]
+    FROM [Transactions] AS [t]
+    WHERE [t].[UserId] = @__userId_0 AND [t].[CreatedAt] >= @__filter_FromDate_1 AND [t].[CreatedAt] <= @__filter_ToDate_2
+    ORDER BY [t].[Id]
+    OFFSET @__p_3 ROWS FETCH NEXT @__p_4 ROWS ONLY
+) AS [t0]
+INNER JOIN [TransactionTypes] AS [t1] ON [t0].[TransactionTypeId] = [t1].[Id]
+INNER JOIN [Statuses] AS [s] ON [t0].[StatusId] = [s].[Id]
+ORDER BY [t0].[Id]
+2025-11-13 09:50:40.369 +02:00 [INF] Transaction history accessed by user {"UserId":1,"RequestTime":"2025-11-13T07:50:40.3686898Z","Filter":{"ToDate":"2027-12-01T00:00:00.0000000","FromDate":"2023-12-01T00:00:00.0000000","StatusId":0,"TransactionTypeId":0,"$type":"TransactionHistoryFilter"},"SortColumn":"Id","SortDirection":"asc","PageIndex":0,"PageSize":50,"RecordCount":2}
+2025-11-13 09:50:40.383 +02:00 [INF] Executing ObjectResult, writing value of type 'TransactionCompliance.Application.DTO.Common.DataTableResponse`1[[TransactionCompliance.Application.DTO.Response.TransactionHistoryResponseModel, TransactionCompliance.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-13 09:50:40.385 +02:00 [INF] Executed action TransactionCompliance.API.Controllers.TransactionController.GetTransactionHistory (TransactionCompliance.API) in 46.406ms
+2025-11-13 09:50:40.388 +02:00 [INF] Executed endpoint 'TransactionCompliance.API.Controllers.TransactionController.GetTransactionHistory (TransactionCompliance.API)'
+2025-11-13 09:50:40.389 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7203/api/v1/Transaction/History?request=%7B%22PageIndex%22%3A0%2C%22PageSize%22%3A50%2C%22SortCol%22%3A%22Id%22%2C%22SortDirection%22%3A%22asc%22%2C%22TableFilter%22%3A%7B%22FromDate%22%3A%222023-12-01%22%2C%22ToDate%22%3A%222027-12-01%22%7D%7D - 200 null application/json; charset=utf-8 77.2871ms
+2025-11-13 09:58:13.739 +02:00 [WRN] No store type was specified for the decimal property 'Amount' on entity type 'Transaction'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-11-13 09:58:14.629 +02:00 [INF] Executed DbCommand (27ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [UserAccounts] AS [u]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-11-13 09:58:14.668 +02:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Statuses] AS [s]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-11-13 09:58:14.679 +02:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [TransactionTypes] AS [t]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-11-13 09:58:14.687 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Transactions] AS [t]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-11-13 09:58:14.786 +02:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-11-13 09:58:15.012 +02:00 [INF] Now listening on: https://localhost:7203
+2025-11-13 09:58:15.018 +02:00 [INF] Now listening on: http://localhost:5037
+2025-11-13 09:58:15.144 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-13 09:58:15.146 +02:00 [INF] Hosting environment: Development
+2025-11-13 09:58:15.148 +02:00 [INF] Content root path: C:\Users\User\source\repos\TransactionCompliance\TransactionCompliance.API
+2025-11-13 09:58:15.735 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7203/swagger/index.html - null null
+2025-11-13 09:58:16.167 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7203/swagger/index.html - 200 null text/html;charset=utf-8 448.154ms
+2025-11-13 09:58:16.200 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7203/_framework/aspnetcore-browser-refresh.js - null null
+2025-11-13 09:58:16.200 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7203/_vs/browserLink - null null
+2025-11-13 09:58:16.213 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7203/_framework/aspnetcore-browser-refresh.js - 200 16535 application/javascript; charset=utf-8 13.8674ms
+2025-11-13 09:58:16.265 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7203/_vs/browserLink - 200 null text/javascript; charset=UTF-8 65.7121ms
+2025-11-13 09:58:16.291 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7203/swagger/v1/swagger.json - null null
+2025-11-13 09:58:16.307 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7203/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 16.7099ms
+2025-11-13 09:58:32.734 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7203/api/v1/Transaction/History - null null
+2025-11-13 09:58:32.838 +02:00 [INF] Executing endpoint 'TransactionCompliance.API.Controllers.TransactionController.GetTransactionHistory (TransactionCompliance.API)'
+2025-11-13 09:58:32.876 +02:00 [INF] Route matched with {action = "GetTransactionHistory", controller = "Transaction"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TransactionCompliance.Application.DTO.Common.DataTableResponse`1[TransactionCompliance.Application.DTO.Response.TransactionHistoryResponseModel]]] GetTransactionHistory(System.String) on controller TransactionCompliance.API.Controllers.TransactionController (TransactionCompliance.API).
+2025-11-13 09:58:33.575 +02:00 [INF] Executed DbCommand (67ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Transactions] AS [t]
+WHERE [t].[UserId] = @__userId_0
+2025-11-13 09:58:34.249 +02:00 [INF] Executed DbCommand (29ms) [Parameters=[@__userId_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t0].[Id], CAST(0 AS bit), [t1].[Id], [t1].[CreatedAt], [t1].[Description], [t1].[Name], [t1].[UpdatedAt], CAST(0 AS bit), [s].[Id], [s].[CreatedAt], [s].[Description], [s].[Name], [t0].[Amount], [t0].[AccountNumberMasked], [t0].[CardNumberMasked]
+FROM (
+    SELECT [t].[Id], [t].[AccountNumberMasked], [t].[Amount], [t].[CardNumberMasked], [t].[CreatedAt], [t].[StatusId], [t].[TransactionTypeId]
+    FROM [Transactions] AS [t]
+    WHERE [t].[UserId] = @__userId_0
+    ORDER BY [t].[CreatedAt] DESC
+    OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+) AS [t0]
+INNER JOIN [TransactionTypes] AS [t1] ON [t0].[TransactionTypeId] = [t1].[Id]
+INNER JOIN [Statuses] AS [s] ON [t0].[StatusId] = [s].[Id]
+ORDER BY [t0].[CreatedAt] DESC
+2025-11-13 09:58:34.263 +02:00 [INF] Transaction history accessed by user {"UserId":1,"RequestTime":"2025-11-13T07:58:34.2593792Z","Filter":null,"SortColumn":"CreatedAt","SortDirection":"desc","PageIndex":null,"PageSize":50,"RecordCount":2}
+2025-11-13 09:58:34.284 +02:00 [INF] Executing ObjectResult, writing value of type 'TransactionCompliance.Application.DTO.Common.DataTableResponse`1[[TransactionCompliance.Application.DTO.Response.TransactionHistoryResponseModel, TransactionCompliance.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-13 09:58:34.303 +02:00 [INF] Executed action TransactionCompliance.API.Controllers.TransactionController.GetTransactionHistory (TransactionCompliance.API) in 1416.5115ms
+2025-11-13 09:58:34.305 +02:00 [INF] Executed endpoint 'TransactionCompliance.API.Controllers.TransactionController.GetTransactionHistory (TransactionCompliance.API)'
+2025-11-13 09:58:34.311 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7203/api/v1/Transaction/History - 200 null application/json; charset=utf-8 1576.7582ms

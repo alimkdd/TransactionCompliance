@@ -1,0 +1,353 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\User\\source\\repos\\TransactionCompliance\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A0700DCF-A6E8-7319-1C76-D9EDB6343300}|TransactionCompliance.API\\TransactionCompliance.API.csproj|c:\\users\\user\\source\\repos\\transactioncompliance\\transactioncompliance.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A0700DCF-A6E8-7319-1C76-D9EDB6343300}|TransactionCompliance.API\\TransactionCompliance.API.csproj|solutionrelative:transactioncompliance.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A0700DCF-A6E8-7319-1C76-D9EDB6343300}|TransactionCompliance.API\\TransactionCompliance.API.csproj|c:\\users\\user\\source\\repos\\transactioncompliance\\transactioncompliance.api\\controllers\\transactioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A0700DCF-A6E8-7319-1C76-D9EDB6343300}|TransactionCompliance.API\\TransactionCompliance.API.csproj|solutionrelative:transactioncompliance.api\\controllers\\transactioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A0700DCF-A6E8-7319-1C76-D9EDB6343300}|TransactionCompliance.API\\TransactionCompliance.API.csproj|c:\\users\\user\\source\\repos\\transactioncompliance\\transactioncompliance.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A0700DCF-A6E8-7319-1C76-D9EDB6343300}|TransactionCompliance.API\\TransactionCompliance.API.csproj|solutionrelative:transactioncompliance.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A0700DCF-A6E8-7319-1C76-D9EDB6343300}|TransactionCompliance.API\\TransactionCompliance.API.csproj|c:\\users\\user\\source\\repos\\transactioncompliance\\transactioncompliance.api\\common\\mapperregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A0700DCF-A6E8-7319-1C76-D9EDB6343300}|TransactionCompliance.API\\TransactionCompliance.API.csproj|solutionrelative:transactioncompliance.api\\common\\mapperregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A669EFBD-5CE6-EB05-062E-FA438BE1637A}|TransactionCompliance.Application\\TransactionCompliance.Application.csproj|c:\\users\\user\\source\\repos\\transactioncompliance\\transactioncompliance.application\\transactioncompliance.application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{A669EFBD-5CE6-EB05-062E-FA438BE1637A}|TransactionCompliance.Application\\TransactionCompliance.Application.csproj|solutionrelative:transactioncompliance.application\\transactioncompliance.application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A669EFBD-5CE6-EB05-062E-FA438BE1637A}|TransactionCompliance.Application\\TransactionCompliance.Application.csproj|c:\\users\\user\\source\\repos\\transactioncompliance\\transactioncompliance.application\\mapper\\mapsterconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A669EFBD-5CE6-EB05-062E-FA438BE1637A}|TransactionCompliance.Application\\TransactionCompliance.Application.csproj|solutionrelative:transactioncompliance.application\\mapper\\mapsterconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B666FE78-BA6C-A139-F9A6-D5B2810F35AD}|TransactionCompliance.Infrastructure\\TransactionCompliance.Infrastructure.csproj|c:\\users\\user\\source\\repos\\transactioncompliance\\transactioncompliance.infrastructure\\context\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B666FE78-BA6C-A139-F9A6-D5B2810F35AD}|TransactionCompliance.Infrastructure\\TransactionCompliance.Infrastructure.csproj|solutionrelative:transactioncompliance.infrastructure\\context\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B666FE78-BA6C-A139-F9A6-D5B2810F35AD}|TransactionCompliance.Infrastructure\\TransactionCompliance.Infrastructure.csproj|c:\\users\\user\\source\\repos\\transactioncompliance\\transactioncompliance.infrastructure\\common\\dbseeder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B666FE78-BA6C-A139-F9A6-D5B2810F35AD}|TransactionCompliance.Infrastructure\\TransactionCompliance.Infrastructure.csproj|solutionrelative:transactioncompliance.infrastructure\\common\\dbseeder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A669EFBD-5CE6-EB05-062E-FA438BE1637A}|TransactionCompliance.Application\\TransactionCompliance.Application.csproj|c:\\users\\user\\source\\repos\\transactioncompliance\\transactioncompliance.application\\services\\transactionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A669EFBD-5CE6-EB05-062E-FA438BE1637A}|TransactionCompliance.Application\\TransactionCompliance.Application.csproj|solutionrelative:transactioncompliance.application\\services\\transactionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A669EFBD-5CE6-EB05-062E-FA438BE1637A}|TransactionCompliance.Application\\TransactionCompliance.Application.csproj|c:\\users\\user\\source\\repos\\transactioncompliance\\transactioncompliance.application\\validations\\loginrequestmodelvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A669EFBD-5CE6-EB05-062E-FA438BE1637A}|TransactionCompliance.Application\\TransactionCompliance.Application.csproj|solutionrelative:transactioncompliance.application\\validations\\loginrequestmodelvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A669EFBD-5CE6-EB05-062E-FA438BE1637A}|TransactionCompliance.Application\\TransactionCompliance.Application.csproj|c:\\users\\user\\source\\repos\\transactioncompliance\\transactioncompliance.application\\dto\\request\\loginrequestmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A669EFBD-5CE6-EB05-062E-FA438BE1637A}|TransactionCompliance.Application\\TransactionCompliance.Application.csproj|solutionrelative:transactioncompliance.application\\dto\\request\\loginrequestmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A669EFBD-5CE6-EB05-062E-FA438BE1637A}|TransactionCompliance.Application\\TransactionCompliance.Application.csproj|c:\\users\\user\\source\\repos\\transactioncompliance\\transactioncompliance.application\\validations\\transactionhistoryfiltervalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A669EFBD-5CE6-EB05-062E-FA438BE1637A}|TransactionCompliance.Application\\TransactionCompliance.Application.csproj|solutionrelative:transactioncompliance.application\\validations\\transactionhistoryfiltervalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A669EFBD-5CE6-EB05-062E-FA438BE1637A}|TransactionCompliance.Application\\TransactionCompliance.Application.csproj|c:\\users\\user\\source\\repos\\transactioncompliance\\transactioncompliance.application\\dto\\common\\datatableresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A669EFBD-5CE6-EB05-062E-FA438BE1637A}|TransactionCompliance.Application\\TransactionCompliance.Application.csproj|solutionrelative:transactioncompliance.application\\dto\\common\\datatableresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A669EFBD-5CE6-EB05-062E-FA438BE1637A}|TransactionCompliance.Application\\TransactionCompliance.Application.csproj|c:\\users\\user\\source\\repos\\transactioncompliance\\transactioncompliance.application\\interface\\itransactionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A669EFBD-5CE6-EB05-062E-FA438BE1637A}|TransactionCompliance.Application\\TransactionCompliance.Application.csproj|solutionrelative:transactioncompliance.application\\interface\\itransactionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TransactionController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\TransactionCompliance\\TransactionCompliance.API\\Controllers\\TransactionController.cs",
+              "RelativeDocumentMoniker": "TransactionCompliance.API\\Controllers\\TransactionController.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\TransactionCompliance\\TransactionCompliance.API\\Controllers\\TransactionController.cs",
+              "RelativeToolTip": "TransactionCompliance.API\\Controllers\\TransactionController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-12T12:11:36.331Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ITransactionRepository.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\TransactionCompliance\\TransactionCompliance.Application\\Interface\\ITransactionRepository.cs",
+              "RelativeDocumentMoniker": "TransactionCompliance.Application\\Interface\\ITransactionRepository.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\TransactionCompliance\\TransactionCompliance.Application\\Interface\\ITransactionRepository.cs",
+              "RelativeToolTip": "TransactionCompliance.Application\\Interface\\ITransactionRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-12T12:25:11.984Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "TransactionRepository.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\TransactionCompliance\\TransactionCompliance.Application\\Services\\TransactionRepository.cs",
+              "RelativeDocumentMoniker": "TransactionCompliance.Application\\Services\\TransactionRepository.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\TransactionCompliance\\TransactionCompliance.Application\\Services\\TransactionRepository.cs",
+              "RelativeToolTip": "TransactionCompliance.Application\\Services\\TransactionRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAIBJwBgAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-12T12:39:16.207Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\TransactionCompliance\\TransactionCompliance.API\\Program.cs",
+              "RelativeDocumentMoniker": "TransactionCompliance.API\\Program.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\TransactionCompliance\\TransactionCompliance.API\\Program.cs",
+              "RelativeToolTip": "TransactionCompliance.API\\Program.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAnwCIAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-12T13:10:15.622Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\TransactionCompliance\\TransactionCompliance.API\\appsettings.json",
+              "RelativeDocumentMoniker": "TransactionCompliance.API\\appsettings.json",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\TransactionCompliance\\TransactionCompliance.API\\appsettings.json",
+              "RelativeToolTip": "TransactionCompliance.API\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-11-12T14:15:15.731Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "DbSeeder.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\TransactionCompliance\\TransactionCompliance.Infrastructure\\Common\\DbSeeder.cs",
+              "RelativeDocumentMoniker": "TransactionCompliance.Infrastructure\\Common\\DbSeeder.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\TransactionCompliance\\TransactionCompliance.Infrastructure\\Common\\DbSeeder.cs",
+              "RelativeToolTip": "TransactionCompliance.Infrastructure\\Common\\DbSeeder.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-12T14:37:03.416Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "MapsterConfig.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\TransactionCompliance\\TransactionCompliance.Application\\Mapper\\MapsterConfig.cs",
+              "RelativeDocumentMoniker": "TransactionCompliance.Application\\Mapper\\MapsterConfig.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\TransactionCompliance\\TransactionCompliance.Application\\Mapper\\MapsterConfig.cs",
+              "RelativeToolTip": "TransactionCompliance.Application\\Mapper\\MapsterConfig.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-13T07:32:23.777Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:136:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:132:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:135:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:134:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:133:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:142:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:141:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:140:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:135:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:134:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:132:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:133:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:136:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:137:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{004be353-6879-467c-9d1e-9ac23cdf6d49}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MapperRegistration.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\TransactionCompliance\\TransactionCompliance.API\\Common\\MapperRegistration.cs",
+              "RelativeDocumentMoniker": "TransactionCompliance.API\\Common\\MapperRegistration.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\TransactionCompliance\\TransactionCompliance.API\\Common\\MapperRegistration.cs",
+              "RelativeToolTip": "TransactionCompliance.API\\Common\\MapperRegistration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-20T05:46:13.514Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "TransactionCompliance.Application.csproj",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\TransactionCompliance\\TransactionCompliance.Application\\TransactionCompliance.Application.csproj",
+              "RelativeDocumentMoniker": "TransactionCompliance.Application\\TransactionCompliance.Application.csproj",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\TransactionCompliance\\TransactionCompliance.Application\\TransactionCompliance.Application.csproj",
+              "RelativeToolTip": "TransactionCompliance.Application\\TransactionCompliance.Application.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-11-20T05:47:36.817Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\TransactionCompliance\\TransactionCompliance.Infrastructure\\Context\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "TransactionCompliance.Infrastructure\\Context\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\TransactionCompliance\\TransactionCompliance.Infrastructure\\Context\\AppDbContext.cs",
+              "RelativeToolTip": "TransactionCompliance.Infrastructure\\Context\\AppDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-17T09:09:16.565Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "LoginRequestModelValidator.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\TransactionCompliance\\TransactionCompliance.Application\\Validations\\LoginRequestModelValidator.cs",
+              "RelativeDocumentMoniker": "TransactionCompliance.Application\\Validations\\LoginRequestModelValidator.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\TransactionCompliance\\TransactionCompliance.Application\\Validations\\LoginRequestModelValidator.cs",
+              "RelativeToolTip": "TransactionCompliance.Application\\Validations\\LoginRequestModelValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-13T07:57:34.001Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "LoginRequestModel.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\TransactionCompliance\\TransactionCompliance.Application\\DTO\\Request\\LoginRequestModel.cs",
+              "RelativeDocumentMoniker": "TransactionCompliance.Application\\DTO\\Request\\LoginRequestModel.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\TransactionCompliance\\TransactionCompliance.Application\\DTO\\Request\\LoginRequestModel.cs",
+              "RelativeToolTip": "TransactionCompliance.Application\\DTO\\Request\\LoginRequestModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-13T07:56:15.265Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "TransactionHistoryFilterValidator.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\TransactionCompliance\\TransactionCompliance.Application\\Validations\\TransactionHistoryFilterValidator.cs",
+              "RelativeDocumentMoniker": "TransactionCompliance.Application\\Validations\\TransactionHistoryFilterValidator.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\TransactionCompliance\\TransactionCompliance.Application\\Validations\\TransactionHistoryFilterValidator.cs",
+              "RelativeToolTip": "TransactionCompliance.Application\\Validations\\TransactionHistoryFilterValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-13T07:56:11.437Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "DataTableResponse.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\TransactionCompliance\\TransactionCompliance.Application\\DTO\\Common\\DataTableResponse.cs",
+              "RelativeDocumentMoniker": "TransactionCompliance.Application\\DTO\\Common\\DataTableResponse.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\TransactionCompliance\\TransactionCompliance.Application\\DTO\\Common\\DataTableResponse.cs",
+              "RelativeToolTip": "TransactionCompliance.Application\\DTO\\Common\\DataTableResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-13T07:49:42.828Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

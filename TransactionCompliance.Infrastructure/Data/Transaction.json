@@ -1,0 +1,47 @@
+[
+  {
+    "UserId": 1,
+    "StatusId": 1,
+    "TransactionTypeId": 1,
+    "Amount": 2500.75,
+    "Currency": "USD",
+    "Description": "Payment for invoice #12345",
+    "AccountNumberMasked": "****5678",
+    "CardNumberMasked": "****4321",
+    "AccountNumber": "12345678",
+    "CardNumber": "98764321",
+    "ReferenceNumber": "REF20251112001",
+    "CustomerName": "John Doe",
+    "CreatedAt": "2025-11-12T16:00:00"
+  },
+  {
+    "UserId": 2,
+    "StatusId": 2,
+    "TransactionTypeId": 2,
+    "Amount": 980.00,
+    "Currency": "EUR",
+    "Description": "Refund for order #54321",
+    "AccountNumberMasked": "****9876",
+    "CardNumberMasked": "****8765",
+    "AccountNumber": "87659876",
+    "CardNumber": "12348765",
+    "ReferenceNumber": "REF20251112002",
+    "CustomerName": "Jane Smith",
+    "CreatedAt": "2025-11-11T10:30:00"
+  },
+  {
+    "UserId": 3,
+    "StatusId": 3,
+    "TransactionTypeId": 3,
+    "Amount": 150.50,
+    "Currency": "GBP",
+    "Description": "Subscription payment",
+    "AccountNumberMasked": "****3456",
+    "CardNumberMasked": "****6543",
+    "AccountNumber": "23453456",
+    "CardNumber": "76546543",
+    "ReferenceNumber": "REF20251112003",
+    "CustomerName": "Alice Johnson",
+    "CreatedAt": "2025-11-10T14:20:00"
+  }
+]
